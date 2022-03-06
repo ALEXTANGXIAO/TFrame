@@ -8,7 +8,11 @@ namespace ECS
         private Vector3 m_CamForward;
         public ECSActor EcsActor;
         public Transform MainCameraTrans;
-
+        private Vector3 Move;
+        float m_TurnAmount;
+        float m_ForwardAmount;
+        [SerializeField] float m_MovingTurnSpeed = 360;
+        [SerializeField] float m_StationaryTurnSpeed = 180;
         public float Speed = 2f;
         public override void Awake()
         {
@@ -21,18 +25,12 @@ namespace ECS
             MainCameraTrans = Camera.main.transform;
         }
 
-        private Vector3 Move;
-        float m_TurnAmount;
-        float m_ForwardAmount;
-        [SerializeField] float m_MovingTurnSpeed = 360;
-        [SerializeField] float m_StationaryTurnSpeed = 180;
         public void Update()
         {
             if (EcsInputComponent == null || EcsActor == null)
             {
                 return;
             }
-
 
             var element = Time.deltaTime * Speed;
             if (MainCameraTrans != null)

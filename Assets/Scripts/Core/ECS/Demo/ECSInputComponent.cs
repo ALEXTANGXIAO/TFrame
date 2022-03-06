@@ -9,7 +9,7 @@ namespace ECS
         public bool Splash { private set; get; }
         public void Update()
         {
-            Splash = Input.GetKeyDown(KeyCode.LeftShift);
+            Splash = Input.GetKey(KeyCode.LeftShift);
 
             if (Splash)
             {
@@ -20,7 +20,14 @@ namespace ECS
                 Horizontal = Input.GetAxis("Horizontal")/2;
             }
 
-            Vertical = Input.GetAxis("Vertical");
+            if (Splash)
+            {
+                Vertical = Input.GetAxis("Vertical");
+            }
+            else
+            {
+                Vertical = Input.GetAxis("Vertical") / 2;
+            }
         }
     }
 }
