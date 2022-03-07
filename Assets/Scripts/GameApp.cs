@@ -17,7 +17,6 @@ public class GameApp : UnitySingleton<GameApp>
         entity.AddComponent<ECSMoveCmpt>();
         entity.AddComponent<ECSAnimatorCmpt>();
         Debug.Log(entity.ToString());
-        
 
     }
 }

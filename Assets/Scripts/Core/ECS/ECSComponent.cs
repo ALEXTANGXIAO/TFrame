@@ -9,14 +9,6 @@ namespace ECS
     {
 #pragma warning disable IDE1006 
         public Entity Entity { get; set; }
-
-        public void SetDebugInfo(string key, string value,GameObject gameObject)
-        {
-#if UNITY_EDITOR
-            var debugData = UnityUtil.AddMonoBehaviour<ECSDebugBehaviour>(gameObject);
-            debugData.SetDebugInfo(GetType().Name,key,value);
-#endif
-        }
 #pragma warning restore IDE1006 
     }
 }

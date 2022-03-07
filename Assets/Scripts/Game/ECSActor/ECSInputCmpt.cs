@@ -30,5 +30,7 @@ public class ECSInputCmpt : ECSComponent, IUpdate
         }
 
         Jump = Input.GetKeyDown(KeyCode.Space);
+
+        ECSEventHelper.Send(Entity,ActorEventDefine.ActorMove,Vector3.up);
     }
 }

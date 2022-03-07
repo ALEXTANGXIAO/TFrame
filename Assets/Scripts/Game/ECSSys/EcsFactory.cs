@@ -2,12 +2,13 @@
 using ECS;
 using UnityEngine;
 
-
 public class EcsFactory : Singleton<EcsFactory>
 {
     public EcsGameSystem EcsGameSys;
     private uint m_currentActorId = 1000;
     private Dictionary<uint, Entity> m_entityDic = new Dictionary<uint, Entity>();
+    public Dictionary<uint, Entity> EntityDic => m_entityDic;
+
     public GameObject EntityRoot;
     public EcsFactory()
     {
@@ -22,6 +23,7 @@ public class EcsFactory : Singleton<EcsFactory>
     {
         var entity = EcsGameSys.Create<Entity>();
         entity.AddComponent<ECSGameObjectCmpt>().BindCmpt(gameObject, m_currentActorId);
+        entity.AddComponent<ECSEventCmpt>();
         gameObject.transform.SetParent(EntityRoot.transform);
 #if UNITY_EDITOR
         entity.CheckDebugInfo(gameObject);
@@ -33,7 +35,10 @@ public class EcsFactory : Singleton<EcsFactory>
 
     public Entity Create()
     {
-        return EcsGameSys.Create<Entity>();
+        var entity = EcsGameSys.Create<Entity>();
+        m_entityDic.Add(m_currentActorId, entity);
+        m_currentActorId++;
+        return entity;
     }
 
     public void Destroy(Entity entity)

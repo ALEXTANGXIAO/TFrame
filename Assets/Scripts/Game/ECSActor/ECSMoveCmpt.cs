@@ -27,6 +27,13 @@ public class ECSMoveCmpt : ECSComponent, IUpdate
         MainCameraTrans = Camera.main.transform;
 
         m_Rigidbody = EcsGameObject.gameObject.GetComponent<Rigidbody>();
+
+        Entity.Event.AddEventListener<Vector3>(ActorEventDefine.ActorMove, ActorMove);
+    }
+
+    public void ActorMove(Vector3 vector3)
+    {
+        Debug.Log(vector3);
     }
 
     public override void OnDestroy()

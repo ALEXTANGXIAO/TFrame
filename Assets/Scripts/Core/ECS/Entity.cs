@@ -12,7 +12,7 @@ namespace ECS
         internal bool InActive;
         internal bool CanUpdate;
         public int Index { get; set; } = -1;
-
+        public ECSEventCmpt Event { get; set; }
         public Entity()
         {
             System = ECSSystem.Instance;
@@ -24,6 +24,52 @@ namespace ECS
             {
                 Updates[i].Update();
             }
+        }
+
+        public void RmvComponent<T>() where T : ECSComponent, new()
+        {
+            for (int i = 0; i < Components.Count; i++)
+            {
+                if (Components[i] is T component)
+                {
+                    if (component is IUpdate update)
+                    {
+                        Updates.Remove(update);
+                    }
+
+                    System.Push(component);
+
+                    CanUpdate = Updates.Count > 0;
+                }
+            }
+
+#if UNITY_EDITOR
+            CheckDebugInfo();
+#endif
+        }
+
+        public void RmvComponent(Type componentType)
+        {
+            for (int i = 0; i < Components.Count; i++)
+            {
+                if (Components[i].GetType() == componentType)
+                {
+
+                    if (componentType is IUpdate update)
+                    {
+                        Updates.Remove(update);
+
+                        CanUpdate = Updates.Count > 0;
+                    }
+                    //if (componentType is ECSComponent component)
+                    //{
+                    //    System.Push(component);
+                    //}
+                }
+            }
+#if UNITY_EDITOR
+            CheckDebugInfo();
+#endif
         }
 
         public T AddComponent<T>() where T : ECSComponent, new()
@@ -150,7 +196,7 @@ namespace ECS
                 return;
             }
 
-            var debugBehaviour = gameObject.AddComponent<ECSDebugBehaviour>();
+            var debugBehaviour = UnityUtil.AddMonoBehaviour<ECSDebugBehaviour>(gameObject);
             debugBehaviour.m_ECSInfo.Clear();
             for (int i = 0; i < this.Components.Count; i++)
             {
