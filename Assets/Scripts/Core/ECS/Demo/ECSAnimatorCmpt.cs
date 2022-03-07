@@ -28,6 +28,11 @@ namespace ECS
                 return;
             }
             Move(new Vector2(EcsInputComponent.Horizontal,EcsInputComponent.Vertical));
+
+            if (EcsInputComponent.Jump)
+            {
+                Animator.SetTrigger("Jump");
+            }
         }
     }
 }

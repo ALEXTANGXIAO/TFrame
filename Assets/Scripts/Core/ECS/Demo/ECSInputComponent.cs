@@ -7,6 +7,7 @@ namespace ECS
         public float Horizontal { private set; get; }
         public float Vertical { private set; get; }
         public bool Splash { private set; get; }
+        public bool Jump { private set; get; }
         public void Update()
         {
             Splash = Input.GetKey(KeyCode.LeftShift);
@@ -28,6 +29,8 @@ namespace ECS
             {
                 Vertical = Input.GetAxis("Vertical") / 2;
             }
+
+            Jump = Input.GetKeyDown(KeyCode.Space);
         }
     }
 }

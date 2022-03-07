@@ -13,7 +13,8 @@ namespace ECS
         float m_ForwardAmount;
         [SerializeField] float m_MovingTurnSpeed = 360;
         [SerializeField] float m_StationaryTurnSpeed = 180;
-        public float Speed = 2f;
+        public float Speed = 3f;
+        private Rigidbody m_Rigidbody;
         public override void Awake()
         {
             base.Awake();
@@ -23,6 +24,8 @@ namespace ECS
             EcsActor = Entity.GetComponent<ECSActor>();
 
             MainCameraTrans = Camera.main.transform;
+
+            m_Rigidbody = EcsActor.gameObject.GetComponent<Rigidbody>();
         }
 
         public void Update()
@@ -55,6 +58,7 @@ namespace ECS
             m_ForwardAmount = Move.z;
 
             EcsActor.transform.Translate(Move);
+
             ApplyExtraTurnRotation();
         }
 
