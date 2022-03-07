@@ -14,7 +14,7 @@ namespace ECS
     [Serializable]
     public class ECSCmptDebugKeyInfo
     {
-        public ECSDebugType Type;
+        public ECSDebugType Type = ECSDebugType.Component;
         public string m_name;
         public string val;
     }

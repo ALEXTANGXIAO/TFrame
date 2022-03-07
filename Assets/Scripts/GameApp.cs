@@ -10,28 +10,14 @@ public class GameApp : UnitySingleton<GameApp>
 
     void Start()
     {
-        var entity = EcsGameSystem.Create<Entity>();
-        ECSActor actor = entity.AddComponent<ECSActor>();
-        actor.Name = typeof(ECSActor).ToString();
-        actor.gameObject = Instantiate(Player);
-        actor.transform = actor.gameObject.GetComponent<Transform>();
-        entity.AddComponent<ECSInputComponent>();
-        entity.AddComponent<ECSMoveComponent>();
+        MonoManager.Instance.AddUpdateListener(EcsGameSystem.OnUpdate);
+
+        var entity = EcsFactory.Instance.Create(Instantiate(Player));
+        entity.AddComponent<ECSInputCmpt>();
+        entity.AddComponent<ECSMoveCmpt>();
         entity.AddComponent<ECSAnimatorCmpt>();
-        entity.CheckDebugInfo(actor.gameObject);
         Debug.Log(entity.ToString());
-    }
+        
 
-    void Update()
-    {
-        EcsGameSystem.OnUpdate();
-    }
-}
-
-public class EcsGameSystem : ECSSystem
-{
-    public void OnUpdate()
-    {
-        Update();
     }
 }

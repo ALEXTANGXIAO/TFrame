@@ -6,18 +6,21 @@ namespace ECS
     {
         public Animator Animator;
 
-        public ECSInputComponent EcsInputComponent;
+        public ECSInputCmpt EcsInputComponent;
+
         public override void Awake()
         {
             base.Awake();
-            Animator = Entity.GetComponent<ECSActor>().gameObject?.GetComponentInChildren<Animator>();
 
-            EcsInputComponent = Entity.GetComponent<ECSInputComponent>();
+            Animator = Entity.GetComponent<ECSGameObjectCmpt>().gameObject?.GetComponentInChildren<Animator>();
+
+            EcsInputComponent = Entity.GetComponent<ECSInputCmpt>();
         }
 
         public void Move(Vector2 vector2)
         {
             Animator.SetFloat("horizontal", vector2.x);
+
             Animator.SetFloat("vertical", vector2.y);
         }
 
@@ -33,6 +36,12 @@ namespace ECS
             {
                 Animator.SetTrigger("Jump");
             }
+        }
+
+        public override void OnDestroy()
+        {
+            this.Animator = null;
+            this.EcsInputComponent = null;
         }
     }
 }

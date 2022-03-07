@@ -28,6 +28,9 @@ namespace ECS
 
         public T AddComponent<T>() where T : ECSComponent, new()
         {
+#if UNITY_EDITOR
+            CheckDebugInfo();
+#endif
             T component = System.Get<T>();
             component.Entity = this;
             component.System = System;
@@ -43,6 +46,9 @@ namespace ECS
 
         public ECSComponent AddComponent(ECSComponent component)
         {
+#if UNITY_EDITOR
+            CheckDebugInfo();
+#endif
             component.Entity = this;
             component.System = System;
             Components.Add(component);
@@ -145,6 +151,30 @@ namespace ECS
             }
 
             var debugBehaviour = gameObject.AddComponent<ECSDebugBehaviour>();
+            debugBehaviour.m_ECSInfo.Clear();
+            for (int i = 0; i < this.Components.Count; i++)
+            {
+                var component = this.Components[i];
+                var cmptName = component.GetType().Name;
+                debugBehaviour.SetDebugInfo(cmptName, "", "");
+            }
+#endif
+        }
+        public void CheckDebugInfo()
+        {
+#if UNITY_EDITOR
+            var gameObjectCmpt = GetComponent<ECSGameObjectCmpt>();
+
+            if (gameObjectCmpt == null)
+            {
+                return;
+            }
+            if (gameObjectCmpt.gameObject == null)
+            {
+                return;
+            }
+
+            var debugBehaviour = UnityUtil.AddMonoBehaviour<ECSDebugBehaviour>(gameObjectCmpt.gameObject);
             debugBehaviour.m_ECSInfo.Clear();
             for (int i = 0; i < this.Components.Count; i++)
             {

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 /*
  * Author - AlexTang
  * Date   - 2022/3/3
- *
  */
 
 namespace ECS
