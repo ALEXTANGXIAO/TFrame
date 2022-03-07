@@ -18,12 +18,9 @@ public class Game : MonoBehaviour
 
     public static Game Instance;
     public int MyID = -1;
-    
     public GameState State;
-
     public LockStepFrame Frame = new LockStepFrame();
     public GameLogic Logic = new GameLogic();
-
     public float TickTime = 0.03333333f;
     public float NextTime;
 
@@ -108,14 +105,8 @@ public class Game : MonoBehaviour
             var data = Frame.TickFrame();
             
             Logic.ProcessFrameData(data);
-            if (null != Callback)
-            {
-                Callback(idx, Logic.Data);
-            }
+            Callback?.Invoke(idx, Logic.Data);
         }
-        
-
-        
     }
 
     public string test;
@@ -141,6 +132,4 @@ public class Game : MonoBehaviour
         var bytes = decompressor.Decompress(compressed, 0, result);
         //Assert.Equal(data, bytes);*/
     }
-
-        
 }

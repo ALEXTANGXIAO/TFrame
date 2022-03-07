@@ -22,11 +22,9 @@ public class GamePlay : MonoBehaviour
         }
     }
 
-    // Use this for initialization
     void Start()
     {
         Game.Instance.Callback += TickFrame;
-
     }
 
     void OnDestroy()
@@ -34,7 +32,6 @@ public class GamePlay : MonoBehaviour
         Game.Instance.Callback -= TickFrame;
     }
 
-    // Update is called once per frame
     void Update()
     {
         var d = Game.Instance.Logic.Data;
@@ -47,6 +44,16 @@ public class GamePlay : MonoBehaviour
                 //o.transform.localPosition = playerData.Value.Pos;
             }
         }
+
+        if (false)
+        {
+            var msg = pb.C2S_InputMsg.CreateBuilder();
+            msg.SetX(1f);
+            msg.SetY(1f);
+            msg.SetZ(1f);
+            Network.Instance.Send(pb.ID.MSG_Input, msg.Build());
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             var msg = pb.C2S_InputMsg.CreateBuilder();
@@ -79,11 +86,11 @@ public class GamePlay : MonoBehaviour
         if (a >= NextEventFrame)
         {
 
-            NextEventFrame = a + (uint)Random.RandomRange(10, 40);
-            var x = Random.RandomRange(-8, 8);
-            var z = Random.RandomRange(-8, 8);
+            NextEventFrame = a + (uint)Random.Range(10, 40);
+            var x = Random.Range(-8, 8);
+            var z = Random.Range(-8, 8);
 
-            var o = GameObject.Instantiate(Objs[Random.RandomRange(0, Objs.Count - 1)], new Vector3(x, 0, z), Quaternion.identity);
+            var o = GameObject.Instantiate(Objs[Random.Range(0, Objs.Count - 1)], new Vector3(x, 0, z), Quaternion.identity);
             o.name = a.ToString();
             objs.Add(o);
         }

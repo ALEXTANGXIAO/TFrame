@@ -72,8 +72,8 @@ namespace UnityStandardAssets.Cameras
                 return;
 
             // Read the user input
-            //var x = CrossPlatformInputManager.GetAxis("Mouse X");
-            //var y = CrossPlatformInputManager.GetAxis("Mouse Y");
+            //var x = InputSys.GetAxis("Mouse X");
+            //var y = InputSys.GetAxis("Mouse Y");
             var x = Input.GetAxis("Mouse X");
             var y = Input.GetAxis("Mouse Y");
 

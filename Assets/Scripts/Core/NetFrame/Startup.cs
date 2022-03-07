@@ -5,7 +5,7 @@ using UnityEngine;
 public class Startup : MonoBehaviour
 {
 
-    public GameObject p;
+    public GameObject Game;
 
     public static GameObject GameIns;
 
@@ -13,7 +13,7 @@ public class Startup : MonoBehaviour
     {
         if (null == GameIns)
         {
-            GameIns = GameObject.Instantiate(p);
+            GameIns = GameObject.Instantiate(Game);
         }
         GameIns.GetComponent<Game>().Reset();
     }

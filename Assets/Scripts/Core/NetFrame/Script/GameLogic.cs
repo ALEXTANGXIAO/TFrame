@@ -10,12 +10,12 @@ public class GameData
 
         public int Progress;
         public Vector3 Pos;
-        public Quaternion Dir;
+        public Vector3 Dir;
 
         public PlayerData()
         {
             Pos = Vector3.zero;
-            Dir = Quaternion.identity;
+            Dir = Vector3.zero;
         }
     }
 
@@ -54,7 +54,7 @@ public class GameLogic
 
     public void ProcessFrameData(pb.FrameData msg)
     {
-        if (null == msg)
+        if (msg == null)
         {
             return;
         }
