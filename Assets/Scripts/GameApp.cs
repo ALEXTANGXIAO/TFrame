@@ -7,6 +7,7 @@ sealed partial class GameApp : UnitySingleton<GameApp>
 {
     public EcsGameSystem EcsGameSystem = new EcsGameSystem();
     public GameObject Player;
+    public bool LocalGame;
 
     public override void Awake()
     {
@@ -22,12 +23,19 @@ sealed partial class GameApp : UnitySingleton<GameApp>
         MonoManager.Instance.AddUpdateListener(EcsGameSystem.OnUpdate);
         MonoManager.Instance.AddFixedUpdateListener(EcsGameSystem.OnFixedUpdate);
 
-        UISys.Mgr.ShowWindow<LoginMainUI>();
-        //var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
-        //entity.AddComponent<ECSInputCmpt>();
-        //entity.AddComponent<ECSMoveCmpt>();
-        //entity.AddComponent<ECSAnimatorCmpt>();
-        //Debug.Log(entity.ToString());
+        if (!LocalGame)
+        {
+            UISys.Mgr.ShowWindow<LoginMainUI>();
+        }
+        else
+        {
+            var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
+            entity.AddComponent<ECSInputCmpt>();
+            entity.AddComponent<ECSMoveCmpt>();
+            entity.AddComponent<ECSAnimatorCmpt>();
+            Debug.Log(entity.ToString());
+        }
+
         //StartCoroutine(Test(entity));
     }
 

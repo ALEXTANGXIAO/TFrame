@@ -2336,3 +2336,60 @@
 2022-03-08 20:38:47 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:51891 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
 2022-03-08 20:38:47 [DEBG] [G:/github/TFrame/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:51891 Uniid :=> 1   ClientCount => 0
 2022-03-08 20:38:47 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:51891 Uniid :=> 1   ClientCount => 0
+2022-03-08 20:40:16 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63232 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-03-08 20:40:16 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63232 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63232 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63232 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-03-08 20:40:16 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63232 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:40:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63232 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-03-08 20:40:17 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-03-08 20:40:17 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63237 requestcode:User actioncode:Login loginPack:<username:"234" password:"234" > 
+2022-03-08 20:40:17 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"234" password:"234" > str:"234" 
+2022-03-08 20:40:17 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63237 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"234" password:"234" > str:"234" 
+2022-03-08 20:40:17 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63237 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 50 51 52 18 3 50 51 52 42 3 50 51 52]
+2022-03-08 20:40:18 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63237 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-03-08 20:40:18 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:40:18 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63237 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:40:18 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63237 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-03-08 20:40:18 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63232 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-03-08 20:40:18 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63232 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-03-08 20:40:20 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63232 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"234" playerID:"0" > 
+2022-03-08 20:40:20 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63232 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 50 51 52 18 1 48]
+2022-03-08 20:40:20 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63237 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"234" playerID:"0" > 
+2022-03-08 20:40:20 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63237 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 50 51 52 18 1 48]
+2022-03-08 20:40:41 [EMER] [G:/github/TFrame/GameServer/App/Server.go:169] 127.0.0.1:63232
+2022-03-08 20:40:41 [EMER] [G:/github/TFrame/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-03-08 20:40:41 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63232 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-03-08 20:40:41 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63232 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-03-08 20:40:41 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63237 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-03-08 20:40:41 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63237 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-03-08 20:40:41 [DEBG] [G:/github/TFrame/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:63232 Uniid :=> 3   ClientCount => 1
+2022-03-08 20:40:41 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:63232 Uniid :=> 3   ClientCount => 1
+2022-03-08 20:40:42 [EMER] [G:/github/TFrame/GameServer/App/Server.go:169] 127.0.0.1:63237
+2022-03-08 20:40:42 [EMER] [G:/github/TFrame/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-03-08 20:40:42 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:63237 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"234" 
+2022-03-08 20:40:42 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:63237 send buff:  [9 0 0 0 8 2 16 13 42 3 50 51 52]
+2022-03-08 20:40:42 [DEBG] [G:/github/TFrame/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:63237 Uniid :=> 4   ClientCount => 0
+2022-03-08 20:40:42 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:63237 Uniid :=> 4   ClientCount => 0
+2022-03-08 20:44:08 [INFO] [G:/github/TFrame/GameServer/Common/database.go:36] Connect MySql Success!
+2022-03-08 20:44:09 [DEBG] [G:/github/TFrame/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001e0d00 false 0 {0xc000139d60} <nil> {{0 0} {<nil>} map[] 0} 0xc0001e0dd0 0x8a1fe0 0xc00009cd68 false <nil>}
+2022-03-08 20:44:09 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x51c2c0 Register:0x51c3c0] <nil>}
+2022-03-08 20:44:09 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x51b980 CreateRoom:0x51bac0 JoinRoom:0x51bee0] <nil>}
+2022-03-08 20:44:09 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x51aee0 UpdateState:0x51b020] <nil>}
+2022-03-08 20:44:09 [INFO] [G:/github/TFrame/GameServer/App/Server.go:47] Starting Game Server
+2022-03-08 20:44:09 [INFO] [G:/github/TFrame/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-03-08 20:44:09 [INFO] [G:/github/TFrame/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-03-08 20:44:14 [DEBG] [G:/github/TFrame/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:54705 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-03-08 20:44:14 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:54705 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:54705 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:54705 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-03-08 20:44:14 [DEBG] [G:/github/TFrame/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:54705 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-03-08 20:44:14 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:54705 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-03-08 20:44:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:77] 127.0.0.1:54705 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-03-08 20:44:16 [CRIT] [G:/github/TFrame/GameServer/App/DataCenter.go:79] 127.0.0.1:54705 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]

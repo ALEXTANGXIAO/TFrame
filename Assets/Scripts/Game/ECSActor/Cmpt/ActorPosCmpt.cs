@@ -18,6 +18,19 @@ class ActorPosCmpt : ECSComponent,IUpdate
             gameObject = actorEntity.gameObject;
         }
         m_gameTimerTick = new GameTimerTick(0.1f, OnTick);
+
+        RegisterEvent();
+    }
+
+    private void RegisterEvent()
+    {
+        Entity.Event.AddEventListener<Vector2>(ActorEventDefine.ActorVector2, ActorVector2);
+    }
+
+    private Vector2 MoveInput;
+    public void ActorVector2(Vector2 vector2)
+    {
+        MoveInput = vector2;
     }
 
     private int m_animation;
@@ -47,6 +60,6 @@ class ActorPosCmpt : ECSComponent,IUpdate
 
         var dir = gameObject.transform.eulerAngles.y;//ctrl.Root.transform.eulerAngles;
 
-        ActorDataMgr.Instance.UpCachePosReq(pos, dir);
+        ActorDataMgr.Instance.UpCachePosReq(pos, dir,MoveInput);
     }
 }

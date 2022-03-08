@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_MoveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
+      propertyPath: m_UpdateType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
       propertyPath: visualiseInEditor
       value: 1
@@ -471,6 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 6696332478108553364, guid: edf2050e40cd31b4da888cabebd6569b, type: 3}
+  LocalGame: 1
   TargetFrameRate: 60
   hostPoint: 2
 --- !u!4 &1843563995

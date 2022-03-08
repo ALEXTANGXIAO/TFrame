@@ -21,14 +21,14 @@ public class ActorDataMgr : DataCenterModule<ActorDataMgr>
         ActorSys.Instance.UpPos(mainPack);
     }
 
-    public void UpCachePosReq(Vector3 pos, float dir)
+    public void UpCachePosReq(Vector3 pos, float dir,Vector2 move)
     {
         m_mainPack.Playerpack[0].PosPack.PosX = pos.x;
         m_mainPack.Playerpack[0].PosPack.PosY = pos.y;
         m_mainPack.Playerpack[0].PosPack.PosZ = pos.z;
 
-        //m_mainPack.Playerpack[0].PosPack.RotaX = rotation.x;
-        //m_mainPack.Playerpack[0].PosPack.RotaY = rotation.y;
+        m_mainPack.Playerpack[0].PosPack.RotaX = move.x;
+        m_mainPack.Playerpack[0].PosPack.RotaY = move.y;
         //m_mainPack.Playerpack[0].PosPack.RotaZ = rotation.z;
 
         m_mainPack.Playerpack[0].PosPack.Dirt = dir;
