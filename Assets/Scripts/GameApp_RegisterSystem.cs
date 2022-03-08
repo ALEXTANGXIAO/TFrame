@@ -40,6 +40,7 @@ sealed partial class GameApp
     #region 生命周期
     public void Start()
     {
+        GameTime.StartFrame();
         var listLogic = m_listLogicMgr;
         var logicCnt = listLogic.Count;
         for (int i = 0; i < logicCnt; i++)
@@ -51,6 +52,7 @@ sealed partial class GameApp
 
     public void Update()
     {
+        GameTime.StartFrame();
         var listLogic = m_listLogicMgr;
         var logicCnt = listLogic.Count;
         for (int i = 0; i < logicCnt; i++)
@@ -62,6 +64,7 @@ sealed partial class GameApp
 
     public void LateUpdate()
     {
+        GameTime.StartFrame();
         var listLogic = m_listLogicMgr;
         var logicCnt = listLogic.Count;
         for (int i = 0; i < logicCnt; i++)
@@ -73,6 +76,7 @@ sealed partial class GameApp
 
     public void OnPause()
     {
+        GameTime.StartFrame();
         for (int i = 0; i < m_listLogicMgr.Count; i++)
         {
             var logicSys = m_listLogicMgr[i];
@@ -82,6 +86,7 @@ sealed partial class GameApp
 
     public void OnResume()
     {
+        GameTime.StartFrame();
         for (int i = 0; i < m_listLogicMgr.Count; i++)
         {
             var logicSys = m_listLogicMgr[i];
@@ -91,6 +96,7 @@ sealed partial class GameApp
 
     public void OnDestroy()
     {
+        GameTime.StartFrame();
         for (int i = 0; i < m_listLogicMgr.Count; i++)
         {
             var logicSys = m_listLogicMgr[i];
@@ -114,6 +120,7 @@ sealed partial class GameApp
         //EventCenter.OnInit();
         AddLogicSys(UISys.Instance);
         AddLogicSys(EcsFactory.Instance);
+        AddLogicSys(DataCenterSys.Instance);
         GameClient.Instance.Init();
     }
 

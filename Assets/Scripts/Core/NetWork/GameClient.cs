@@ -242,6 +242,8 @@ public class GameClient : Singleton<GameClient>
     /// <param name="pack"></param>
     private void UdpHandleResponse(MainPack pack)
     {
+        Debug.Log(pack);
+
         List<CSMsgDelegate> listHandle;
 
         if (m_mapCmdHandle.TryGetValue((int)pack.Actioncode, out listHandle))
@@ -300,7 +302,7 @@ public class GameClient : Singleton<GameClient>
             return;
         }
         Debug.LogFormat("start connect udp server[{0}:{1}] successed...".ToColor("10FD00"), m_Host, m_Port);
-        Loom.RunAsync(() =>
+        Core.Loom.RunAsync(() =>
         {
             aucThread = new Thread(ReceiveMsg);
             aucThread.Start();

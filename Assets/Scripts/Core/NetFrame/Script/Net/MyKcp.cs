@@ -8,7 +8,7 @@ public class MyKcp : KcpClient
 {
     protected override void HandleReceive(ByteBuf bb)
     {
-        Loom.QueueOnMainThread(() =>
+        NetFrame.Loom.QueueOnMainThread(() =>
         {
             Network.Instance.HandleReceive(bb);
 
@@ -23,7 +23,7 @@ public class MyKcp : KcpClient
     {
         base.HandleException(ex);
 
-        Loom.QueueOnMainThread(() =>
+        NetFrame.Loom.QueueOnMainThread(() =>
         {
             Network.Instance.HandleException(ex);
         });
@@ -36,7 +36,7 @@ public class MyKcp : KcpClient
     {
         base.HandleTimeout();
 
-        Loom.QueueOnMainThread(() =>
+        NetFrame.Loom.QueueOnMainThread(() =>
         {
             Network.Instance.HandleTimeout();
         });

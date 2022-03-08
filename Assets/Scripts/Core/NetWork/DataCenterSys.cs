@@ -18,11 +18,11 @@ class DataCenterSys : BaseLogicSys<DataCenterSys>
 
     void InitModule()
     {
-        //InitModule(LoginDataMgr.Instance);
-        //InitModule(RoomDataMgr.Instance);
-        //InitModule(GameDataMgr.Instance);
+        InitModule(LoginDataMgr.Instance);
+        InitModule(RoomDataMgr.Instance);
+        InitModule(GameDataMgr.Instance);
         ////InitModule(ChatDataMgr.Instance);
-        //InitModule(ActorDataMgr.Instance);
+        InitModule(ActorDataMgr.Instance);
     }
 
     public void InitModule(IDataCenterModule module)

@@ -21,11 +21,13 @@ sealed partial class GameApp : UnitySingleton<GameApp>
     {
         MonoManager.Instance.AddUpdateListener(EcsGameSystem.OnUpdate);
         MonoManager.Instance.AddFixedUpdateListener(EcsGameSystem.OnFixedUpdate);
-        var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
-        entity.AddComponent<ECSInputCmpt>();
-        entity.AddComponent<ECSMoveCmpt>();
-        entity.AddComponent<ECSAnimatorCmpt>();
-        Debug.Log(entity.ToString());
+
+        UISys.Mgr.ShowWindow<LoginMainUI>();
+        //var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
+        //entity.AddComponent<ECSInputCmpt>();
+        //entity.AddComponent<ECSMoveCmpt>();
+        //entity.AddComponent<ECSAnimatorCmpt>();
+        //Debug.Log(entity.ToString());
         //StartCoroutine(Test(entity));
     }
 

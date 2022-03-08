@@ -21,23 +21,22 @@ public class ActorDataMgr : DataCenterModule<ActorDataMgr>
         ActorSys.Instance.UpPos(mainPack);
     }
 
-    public void UpCachePosReq(Vector3 pos, Vector3 rotation)
+    public void UpCachePosReq(Vector3 pos, float dir)
     {
         m_mainPack.Playerpack[0].PosPack.PosX = pos.x;
         m_mainPack.Playerpack[0].PosPack.PosY = pos.y;
         m_mainPack.Playerpack[0].PosPack.PosZ = pos.z;
 
-        m_mainPack.Playerpack[0].PosPack.RotaX = rotation.x;
-        m_mainPack.Playerpack[0].PosPack.RotaY = rotation.y;
-        m_mainPack.Playerpack[0].PosPack.RotaZ = rotation.z;
+        //m_mainPack.Playerpack[0].PosPack.RotaX = rotation.x;
+        //m_mainPack.Playerpack[0].PosPack.RotaY = rotation.y;
+        //m_mainPack.Playerpack[0].PosPack.RotaZ = rotation.z;
 
-        //m_mainPack.Playerpack[0].Playername = LoginDataMgr.Instance.m_userName;
+        m_mainPack.Playerpack[0].PosPack.Dirt = dir;
+
+        m_mainPack.Playerpack[0].Playername = LoginDataMgr.Instance.m_userName;
+        m_mainPack.User = LoginDataMgr.Instance.m_userName;
         if (IsUDP)
         {
-            if (!m_setName)
-            {
-                //m_mainPack.User = LoginDataMgr.Instance.m_userName;
-            }
             GameClient.Instance.SendCSMsgUdp(m_mainPack);
         }
         else
