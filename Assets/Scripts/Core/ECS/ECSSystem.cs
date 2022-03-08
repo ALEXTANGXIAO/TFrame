@@ -96,6 +96,15 @@ namespace ECS
         }
 
         /// <summary>
+        /// 更新ECS物理系统
+        /// </summary>
+        /// <param name="worker">线程池是否并行</param>
+        public void FixedUpdate(bool worker = false)
+        {
+            RunFixed(worker);
+        }
+
+        /// <summary>
         /// 运行ECS系统
         /// </summary>
         /// <param name="worker">线程池是否并行</param>
@@ -132,6 +141,43 @@ namespace ECS
                         return;
                     }
                     Entities[i].Execute();
+                });
+            }
+        }
+
+        public void RunFixed(bool worker = false)
+        {
+            int count = Entities.Count;
+            if (!worker)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    if (!Entities.Buckets[i])
+                    {
+                        continue;
+                    }
+
+                    if (!Entities[i].CanFixedUpdate)
+                    {
+                        continue;
+                    }
+                    Entities[i].FixedUpdate();
+                }
+            }
+            else
+            {
+                Parallel.For(0, count, i =>
+                {
+                    if (!Entities.Buckets[i])
+                    {
+                        return;
+                    }
+
+                    if (!Entities[i].CanFixedUpdate)
+                    {
+                        return;
+                    }
+                    Entities[i].FixedUpdate();
                 });
             }
         }

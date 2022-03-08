@@ -24,6 +24,15 @@ public class MonoManager : Singleton<MonoManager>
     }
 
     /// <summary>
+    /// 为给外部提供的 添加物理帧更新事件
+    /// </summary>
+    /// <param name="fun"></param>
+    public void AddFixedUpdateListener(UnityAction fun)
+    {
+        controller.AddFixedUpdateListener(fun);
+    }
+
+    /// <summary>
     /// 移除帧更新事件
     /// </summary>
     /// <param name="fun"></param>

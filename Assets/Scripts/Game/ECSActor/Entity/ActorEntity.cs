@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ECS;
+﻿using ECS;
 using UnityEngine;
 
 public enum ActorType
@@ -29,7 +27,7 @@ public class ActorEntity : Entity
     public UnityEngine.Transform transform { get; private set; }
     public uint ActorId { get; private set; }
 
-    public void Bind(GameObject obj, uint actorId)
+    public void Bind(uint actorId,GameObject obj)
     {
         this.gameObject = obj;
         this.transform = gameObject.transform;

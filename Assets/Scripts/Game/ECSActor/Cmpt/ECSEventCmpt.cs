@@ -171,17 +171,17 @@ public class ECSEventCmpt : ECSComponent
     }
     #endregion
 
+    #region 生命周期
     public override void OnDestroy()
     {
-        base.OnDestroy();
         Clear();
     }
 
     public override void Awake()
     {
-        base.Awake();
         Entity.Event = this;
     }
+    #endregion
 }
 
 #region EventInfo

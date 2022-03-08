@@ -9,8 +9,10 @@ namespace ECS
         [SerializeField]
         internal List<ECSComponent> Components = new List<ECSComponent>();
         internal List<IUpdate> Updates = new List<IUpdate>();
+        internal List<IFixedUpdate> FixedUpdates = new List<IFixedUpdate>();
         internal bool InActive;
         internal bool CanUpdate;
+        internal bool CanFixedUpdate;
         public int Index { get; set; } = -1;
         public ECSEventCmpt Event { get; set; }
         public Entity()
@@ -26,6 +28,14 @@ namespace ECS
             }
         }
 
+        internal void FixedUpdate()
+        {
+            for (int i = 0; i < FixedUpdates.Count; i++)
+            {
+                FixedUpdates[i].FixedUpdate();
+            }
+        }
+
         public void RmvComponent<T>() where T : ECSComponent, new()
         {
             for (int i = 0; i < Components.Count; i++)
@@ -36,10 +46,16 @@ namespace ECS
                     {
                         Updates.Remove(update);
                     }
+                    else if (component is IFixedUpdate fixedUpdate)
+                    {
+                        FixedUpdates.Remove(fixedUpdate);
+                    }
 
                     System.Push(component);
 
                     CanUpdate = Updates.Count > 0;
+
+                    CanFixedUpdate = FixedUpdates.Count > 0;
                 }
             }
 
@@ -60,6 +76,12 @@ namespace ECS
                         Updates.Remove(update);
 
                         CanUpdate = Updates.Count > 0;
+                    }
+                    else if (componentType is IFixedUpdate fixedUpdate)
+                    {
+                        FixedUpdates.Remove(fixedUpdate);
+
+                        CanFixedUpdate = FixedUpdates.Count > 0;
                     }
                     //if (componentType is ECSComponent component)
                     //{
@@ -86,7 +108,12 @@ namespace ECS
             {
                 Updates.Add(update);
             }
+            else if (component is IFixedUpdate fixedUpdate)
+            {
+                FixedUpdates.Add(fixedUpdate);
+            }
             CanUpdate = Updates.Count > 0;
+            CanFixedUpdate = FixedUpdates.Count > 0;
             return component;
         }
 
@@ -103,7 +130,12 @@ namespace ECS
             {
                 Updates.Add(update);
             }
+            else if (component is IFixedUpdate fixedUpdate)
+            {
+                FixedUpdates.Add(fixedUpdate);
+            }
             CanUpdate = Updates.Count > 0;
+            CanFixedUpdate = FixedUpdates.Count > 0;
             return component;
         }
 

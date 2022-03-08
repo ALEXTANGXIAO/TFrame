@@ -20,7 +20,8 @@ sealed partial class GameApp : UnitySingleton<GameApp>
     private void InitGame()
     {
         MonoManager.Instance.AddUpdateListener(EcsGameSystem.OnUpdate);
-        var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor,Instantiate(Player));
+        MonoManager.Instance.AddFixedUpdateListener(EcsGameSystem.OnFixedUpdate);
+        var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor,Instantiate(Player),true);
         entity.AddComponent<ECSInputCmpt>();
         entity.AddComponent<ECSMoveCmpt>();
         entity.AddComponent<ECSAnimatorCmpt>();

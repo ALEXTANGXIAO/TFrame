@@ -24,7 +24,7 @@ public class EcsFactory : BaseLogicSys<EcsFactory>
         Object.DontDestroyOnLoad(EntityRoot);
     }
 
-    public ActorEntity CreateActorEntity(ActorType actorType, GameObject gameObject)
+    public ActorEntity CreateActorEntity(ActorType actorType, GameObject gameObject,bool isMainPlayer = false)
     {
         ActorEntity entity = null;
 
@@ -47,7 +47,12 @@ public class EcsFactory : BaseLogicSys<EcsFactory>
             return null;
         }
 
-        entity.Bind(gameObject, m_currentActorId);
+        if (isMainPlayer)
+        {
+            gameObject.tag = "Player";
+        }
+
+        entity.Bind(m_currentActorId, gameObject);
         gameObject.transform.SetParent(EntityRoot.transform);
         entity.AddComponent<ECSEventCmpt>();
         m_entityDic.Add(m_currentActorId, entity);

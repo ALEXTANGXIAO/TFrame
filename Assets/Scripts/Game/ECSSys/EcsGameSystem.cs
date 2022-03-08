@@ -12,4 +12,9 @@ public class EcsGameSystem : ECSSystem
     {
         Update();
     }
+
+    public void OnFixedUpdate()
+    {
+        FixedUpdate();
+    }
 }
