@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using GameProtocol;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngineInternal;
@@ -312,5 +313,26 @@ public static class Utils
         {
             gameObject.transform.localScale = show ? Vector3.one : Vector3.zero;
         }
+    }
+
+    public static bool CheckHaveError(MainPack mainPack)
+    {
+        bool hasError = false;
+        if (mainPack == null)
+        {
+            var tip = string.Format("网络数据错误{0}", mainPack.Actioncode);
+            UISys.ShowTipMsg(tip);
+            Debug.LogFormat("package {0} null!", mainPack.Actioncode);
+            hasError = true;
+            return hasError;
+        }
+
+        if (mainPack.Returncode == ReturnCode.Fail)
+        {
+            UISys.ShowTipMsg(mainPack.Str);
+            hasError = true;
+        }
+
+        return hasError;
     }
 }

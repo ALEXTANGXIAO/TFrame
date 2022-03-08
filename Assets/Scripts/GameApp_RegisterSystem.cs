@@ -114,7 +114,7 @@ sealed partial class GameApp
         //EventCenter.OnInit();
         AddLogicSys(UISys.Instance);
         AddLogicSys(EcsFactory.Instance);
-        //GameClient.Instance.Init();
+        GameClient.Instance.Init();
     }
 
     protected bool AddLogicSys(ILogicSys logicSys)

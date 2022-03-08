@@ -113,6 +113,7 @@ namespace Core
             }
             catch
             {
+                
             }
             finally
             {
@@ -129,12 +130,6 @@ namespace Core
             }
         }
 
-
-        void Start()
-        {
-
-        }
-
         List<NoDelayedQueueItem> _currentActions = new List<NoDelayedQueueItem>();
 
         void Update()
@@ -144,10 +139,6 @@ namespace Core
                 lock (_actions)
                 {
                     _currentActions.Clear();
-                    //for (int i = 0; i < _actions.Count; i++)
-                    //{
-                    //    _currentActions.Add(_actions[i]);
-                    //}
                     _currentActions.AddRange(_actions);
                     _actions.Clear();
                 }
