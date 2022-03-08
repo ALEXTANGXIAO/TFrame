@@ -3,20 +3,34 @@ using System.Collections.Generic;
 using ECS;
 using UnityEngine;
 
-public class GameApp : UnitySingleton<GameApp>
+sealed partial class GameApp : UnitySingleton<GameApp>
 {
     public EcsGameSystem EcsGameSystem = new EcsGameSystem();
     public GameObject Player;
 
-    void Start()
+    public override void Awake()
+    {
+        base.Awake();
+        InitLibImp();
+        RegistAllSystem();
+        SetTargetFrameRate();
+        InitGame();
+    }
+
+    private void InitGame()
     {
         MonoManager.Instance.AddUpdateListener(EcsGameSystem.OnUpdate);
-
-        var entity = EcsFactory.Instance.Create(Instantiate(Player));
+        var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor,Instantiate(Player));
         entity.AddComponent<ECSInputCmpt>();
         entity.AddComponent<ECSMoveCmpt>();
         entity.AddComponent<ECSAnimatorCmpt>();
         Debug.Log(entity.ToString());
+        //StartCoroutine(Test(entity));
+    }
 
+    IEnumerator Test(Entity entity)
+    {
+        yield return new WaitForSeconds(3.0f);
+        ECSObject.Destroy(entity);
     }
 }

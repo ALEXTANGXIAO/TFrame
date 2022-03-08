@@ -1,12 +1,12 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using ECS;
 using UnityEngine;
 
 public class ECSMoveCmpt : ECSComponent, IUpdate
 {
+    private ActorEntity actorEntity;
     public ECSInputCmpt EcsInputComponent;
-    public ECSGameObjectCmpt EcsGameObject;
     public Transform MainCameraTrans;
     private Vector3 m_CamForward;
     private Vector3 Move;
@@ -22,11 +22,16 @@ public class ECSMoveCmpt : ECSComponent, IUpdate
 
         EcsInputComponent = Entity.GetComponent<ECSInputCmpt>();
 
-        EcsGameObject = Entity.GetComponent<ECSGameObjectCmpt>();
-
         MainCameraTrans = Camera.main.transform;
 
-        m_Rigidbody = EcsGameObject.gameObject.GetComponent<Rigidbody>();
+        actorEntity = Entity as ActorEntity;
+
+        if (actorEntity == null)
+        {
+            return;
+        }
+
+        m_Rigidbody = actorEntity.gameObject.GetComponent<Rigidbody>();
 
         Entity.Event.AddEventListener<Vector3>(ActorEventDefine.ActorMove, ActorMove);
     }
@@ -40,19 +45,24 @@ public class ECSMoveCmpt : ECSComponent, IUpdate
     {
         EcsInputComponent = null;
 
-        EcsGameObject = null;
-
         MainCameraTrans = null;
 
         m_Rigidbody = null;
+
+        Entity.Event?.Clear();
     }
 
     public void Update()
     {
-        if (EcsInputComponent == null || EcsGameObject == null)
+        if (actorEntity == null)
+        {
+            return;
+        }
+
+        if (EcsInputComponent == null || actorEntity.gameObject == null)
         {
             Debug.Log(EcsInputComponent);
-            Debug.Log(EcsGameObject);
+            Debug.Log(actorEntity.gameObject);
             return;
         }
 
@@ -71,13 +81,13 @@ public class ECSMoveCmpt : ECSComponent, IUpdate
         {
             Move.Normalize();
         }
-        Move = EcsGameObject.transform.InverseTransformDirection(Move);
+        Move = actorEntity.gameObject.transform.InverseTransformDirection(Move);
         Move = Vector3.ProjectOnPlane(Move, Vector3.up);
 
         m_TurnAmount = Mathf.Atan2(Move.x, Move.z);
         m_ForwardAmount = Move.z;
 
-        EcsGameObject.transform.Translate(Move);
+        actorEntity.gameObject.transform.Translate(Move);
 
         ApplyExtraTurnRotation();
     }
@@ -85,6 +95,6 @@ public class ECSMoveCmpt : ECSComponent, IUpdate
     void ApplyExtraTurnRotation()
     {
         float turnSpeed = Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
-        EcsGameObject.transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
+        actorEntity.gameObject.transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
     }
 }

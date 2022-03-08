@@ -209,18 +209,19 @@ namespace ECS
         public void CheckDebugInfo()
         {
 #if UNITY_EDITOR
-            var gameObjectCmpt = GetComponent<ECSGameObjectCmpt>();
+            var actorEntity = this as ActorEntity;
 
-            if (gameObjectCmpt == null)
-            {
-                return;
-            }
-            if (gameObjectCmpt.gameObject == null)
+            if (actorEntity == null)
             {
                 return;
             }
 
-            var debugBehaviour = UnityUtil.AddMonoBehaviour<ECSDebugBehaviour>(gameObjectCmpt.gameObject);
+            if (actorEntity.gameObject == null)
+            {
+                return;
+            }
+
+            var debugBehaviour = UnityUtil.AddMonoBehaviour<ECSDebugBehaviour>(actorEntity.gameObject);
             debugBehaviour.m_ECSInfo.Clear();
             for (int i = 0; i < this.Components.Count; i++)
             {

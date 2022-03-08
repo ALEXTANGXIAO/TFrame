@@ -2,7 +2,7 @@
 using ECS;
 using UnityEngine;
 
-public class EcsFactory : Singleton<EcsFactory>
+public class EcsFactory : BaseLogicSys<EcsFactory>
 {
     public EcsGameSystem EcsGameSys;
     private uint m_currentActorId = 1000;
@@ -13,24 +13,63 @@ public class EcsFactory : Singleton<EcsFactory>
     public EcsFactory()
     {
         EcsGameSys = GameApp.Instance.EcsGameSystem;
+        InitActorRoot();
+    }
+
+    private void InitActorRoot()
+    {
         EntityRoot = new GameObject();
         EntityRoot.transform.position = Vector3.zero;
         EntityRoot.name = "EntityRoot";
         Object.DontDestroyOnLoad(EntityRoot);
     }
 
-    public Entity Create(GameObject gameObject)
+    public ActorEntity CreateActorEntity(ActorType actorType, GameObject gameObject)
     {
-        var entity = EcsGameSys.Create<Entity>();
-        entity.AddComponent<ECSGameObjectCmpt>().BindCmpt(gameObject, m_currentActorId);
-        entity.AddComponent<ECSEventCmpt>();
+        ActorEntity entity = null;
+
+        switch (actorType)
+        {
+            case ActorType.PlayerActor:
+            {
+                entity = EcsGameSys.Create<PlayerActor>();
+                    break;
+            }
+            case ActorType.MonsterActor:
+            {
+                entity = EcsGameSys.Create<MonsterActor>();
+                    break;
+            }
+        }
+
+        if (entity == null)
+        {
+            return null;
+        }
+
+        entity.Bind(gameObject, m_currentActorId);
         gameObject.transform.SetParent(EntityRoot.transform);
+        entity.AddComponent<ECSEventCmpt>();
+        m_entityDic.Add(m_currentActorId, entity);
+        m_currentActorId++;
 #if UNITY_EDITOR
         entity.CheckDebugInfo(gameObject);
 #endif
-        m_entityDic.Add(m_currentActorId, entity);
-        m_currentActorId++;
         return entity;
+    }
+
+    public void DestroyActorEntity(ActorEntity entity)
+    {
+        var elm = m_entityDic.GetEnumerator();
+        while (elm.MoveNext())
+        {
+            if (elm.Current.Value == entity)
+            {
+                m_entityDic.Remove(elm.Current.Key);
+                return;
+            }
+        }
+        ECSObject.Destroy(entity);
     }
 
     public Entity Create()

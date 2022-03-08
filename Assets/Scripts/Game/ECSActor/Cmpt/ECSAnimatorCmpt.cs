@@ -12,7 +12,14 @@ namespace ECS
         {
             base.Awake();
 
-            Animator = Entity.GetComponent<ECSGameObjectCmpt>().gameObject?.GetComponentInChildren<Animator>();
+            var actorEntity = Entity as ActorEntity;
+
+            if (actorEntity == null)
+            {
+                return;
+            }
+
+            Animator = actorEntity.gameObject?.GetComponentInChildren<Animator>();
 
             EcsInputComponent = Entity.GetComponent<ECSInputCmpt>();
         }
