@@ -242,8 +242,7 @@ public class GameClient : Singleton<GameClient>
     /// <param name="pack"></param>
     private void UdpHandleResponse(MainPack pack)
     {
-        Debug.Log(pack);
-
+        //Debug.Log(pack);
         List<CSMsgDelegate> listHandle;
 
         if (m_mapCmdHandle.TryGetValue((int)pack.Actioncode, out listHandle))

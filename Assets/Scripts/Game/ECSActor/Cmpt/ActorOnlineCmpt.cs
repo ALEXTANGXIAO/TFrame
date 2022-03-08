@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ActorOnlineCmpt : ECSComponent,IUpdate
 {
+    private bool isJump;
     private Vector2 Move;
     private Vector3 Pos;
     private float dir;
@@ -36,17 +37,22 @@ public class ActorOnlineCmpt : ECSComponent,IUpdate
         if (ecsAnimatorCmpt!=null)
         {
             ecsAnimatorCmpt.Move(Move);
+
+            if (isJump)
+            {
+                ecsAnimatorCmpt.Jump(isJump);
+            }
         }
     }
 
     public void UpdatePosPack(PosPack posPack)
     {
-        Debug.Log(posPack);
-
         Pos = new Vector3(posPack.PosX, posPack.PosY, posPack.PosZ);
 
         dir = posPack.Dirt;
 
         Move = new Vector2(posPack.RotaX, posPack.RotaY);
+
+        isJump = posPack.Animation == 1;
     }
 }

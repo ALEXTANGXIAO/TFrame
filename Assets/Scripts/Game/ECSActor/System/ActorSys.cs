@@ -35,13 +35,16 @@ public class ActorSys : BaseLogicSys<ActorSys>
                 entity.AddComponent<ECSInputCmpt>();
                 entity.AddComponent<ActorPosCmpt>();
                 gameObject.tag = "Player";
+                entity.AddComponent<ECSMoveCmpt>();
+                entity.AddComponent<ECSAnimatorCmpt>();
             }
             else
             {
+                entity.AddComponent<ECSMoveCmpt>();
+                entity.AddComponent<ECSAnimatorCmpt>();
                 onlineActors.Add(pack.Playername, entity.AddComponent<ActorOnlineCmpt>());
             }
-            entity.AddComponent<ECSMoveCmpt>();
-            entity.AddComponent<ECSAnimatorCmpt>();
+         
 
             playerActors.Add(pack.Playername,entity);
         }

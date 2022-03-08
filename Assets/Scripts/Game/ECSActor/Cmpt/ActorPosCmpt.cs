@@ -10,6 +10,8 @@ class ActorPosCmpt : ECSComponent,IUpdate
 
     private GameTimerTick m_gameTimerTick;
 
+    public ECSInputCmpt EcsInputComponent;
+
     public override void Awake()
     {
         var actorEntity = Entity as ActorEntity;
@@ -17,21 +19,12 @@ class ActorPosCmpt : ECSComponent,IUpdate
         {
             gameObject = actorEntity.gameObject;
         }
-        m_gameTimerTick = new GameTimerTick(0.1f, OnTick);
+        m_gameTimerTick = new GameTimerTick(0.01f, OnTick);
 
-        RegisterEvent();
-    }
-
-    private void RegisterEvent()
-    {
-        Entity.Event.AddEventListener<Vector2>(ActorEventDefine.ActorVector2, ActorVector2);
+        EcsInputComponent = Entity.GetComponent<ECSInputCmpt>();
     }
 
     private Vector2 MoveInput;
-    public void ActorVector2(Vector2 vector2)
-    {
-        MoveInput = vector2;
-    }
 
     private int m_animation;
     private int Dirt;
@@ -47,6 +40,8 @@ class ActorPosCmpt : ECSComponent,IUpdate
         {
             m_gameTimerTick.OnUpdate();
         }
+
+        MoveInput = new Vector2(EcsInputComponent.Horizontal,EcsInputComponent.Vertical);
     }
 
     public void OnTick()
@@ -58,8 +53,8 @@ class ActorPosCmpt : ECSComponent,IUpdate
 
         Vector3 pos = gameObject.transform.position;
 
-        var dir = gameObject.transform.eulerAngles.y;//ctrl.Root.transform.eulerAngles;
+        var dir = gameObject.transform.eulerAngles.y;
 
-        ActorDataMgr.Instance.UpCachePosReq(pos, dir,MoveInput);
+        ActorDataMgr.Instance.UpCachePosReq(pos, dir,MoveInput,EcsInputComponent.Jump?1:0);
     }
 }

@@ -31,6 +31,14 @@ namespace ECS
             Animator.SetFloat("vertical", vector2.y);
         }
 
+        public void Jump(bool isJump)
+        {
+            if (isJump)
+            {
+                Animator.SetTrigger("Jump");
+            }
+        }
+
         public void Update()
         {
             if (EcsInputComponent == null)
@@ -41,7 +49,7 @@ namespace ECS
 
             if (EcsInputComponent.Jump)
             {
-                Animator.SetTrigger("Jump");
+                Jump(EcsInputComponent.Jump);
             }
         }
 

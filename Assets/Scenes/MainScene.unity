@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 6696332478108553364, guid: edf2050e40cd31b4da888cabebd6569b, type: 3}
-  LocalGame: 1
+  LocalGame: 0
   TargetFrameRate: 60
   hostPoint: 2
 --- !u!4 &1843563995

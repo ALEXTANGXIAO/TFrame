@@ -1,5 +1,4 @@
-﻿
-public class MonsterActor : ActorEntity
+﻿public class MonsterActor : ActorEntity
 {
     
 }

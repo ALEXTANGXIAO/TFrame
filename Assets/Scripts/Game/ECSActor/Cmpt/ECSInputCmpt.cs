@@ -67,11 +67,9 @@ public class ECSInputCmpt : ECSComponent, IUpdate
             Move.Normalize();
         }
 
-
-        Debug.Log("Horozontal: "+Horizontal+"   Vertical: "+Vertical);
-        Debug.Log(Move);
+        //Debug.Log("Horozontal: "+Horizontal+"   Vertical: "+Vertical);
+        //Debug.Log(Move);
         ECSEventHelper.Send(Entity, ActorEventDefine.ActorMove, Move);
-        ECSEventHelper.Send(Entity,ActorEventDefine.ActorVector2, new Vector2(Horizontal,Vertical));
 
         if (Jump)
         {

@@ -21,7 +21,7 @@ public class ActorDataMgr : DataCenterModule<ActorDataMgr>
         ActorSys.Instance.UpPos(mainPack);
     }
 
-    public void UpCachePosReq(Vector3 pos, float dir,Vector2 move)
+    public void UpCachePosReq(Vector3 pos, float dir,Vector2 move,int animation = 0)
     {
         m_mainPack.Playerpack[0].PosPack.PosX = pos.x;
         m_mainPack.Playerpack[0].PosPack.PosY = pos.y;
@@ -32,6 +32,8 @@ public class ActorDataMgr : DataCenterModule<ActorDataMgr>
         //m_mainPack.Playerpack[0].PosPack.RotaZ = rotation.z;
 
         m_mainPack.Playerpack[0].PosPack.Dirt = dir;
+
+        m_mainPack.Playerpack[0].PosPack.Animation = animation;
 
         m_mainPack.Playerpack[0].Playername = LoginDataMgr.Instance.m_userName;
         m_mainPack.User = LoginDataMgr.Instance.m_userName;
