@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-//using CrossPlatformInput;
 
 namespace UnityStandardAssets.Cameras
 {
@@ -60,8 +59,11 @@ namespace UnityStandardAssets.Cameras
 
         protected override void FollowTarget(float deltaTime)
         {
-            if (m_Target == null) return;
-            // Move the rig towards target position.
+            if (m_Target == null)
+            {
+                return;
+            }
+
             transform.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime * m_MoveSpeed);
         }
 
@@ -69,13 +71,12 @@ namespace UnityStandardAssets.Cameras
         private void HandleRotationMovement()
         {
             if (Time.timeScale < float.Epsilon)
+            {
                 return;
+            }
 
-            // Read the user input
-            //var x = InputSys.GetAxis("Mouse X");
-            //var y = InputSys.GetAxis("Mouse Y");
-            var x = Input.GetAxis("Mouse X");
-            var y = Input.GetAxis("Mouse Y");
+            var x = InputSys.GetAxis("Mouse X");
+            var y = InputSys.GetAxis("Mouse Y");
 
             // Adjust the look angle by an amount proportional to the turn speed and horizontal input.
             m_LookAngle += x * m_TurnSpeed;
@@ -85,20 +86,15 @@ namespace UnityStandardAssets.Cameras
 
             if (m_VerticalAutoReturn)
             {
-                // For tilt input, we need to behave differently depending on whether we're using mouse or touch input:
-                // on mobile, vertical input is directly mapped to tilt value, so it springs back automatically when the look input is released
-                // we have to test whether above or below zero because we want to auto-return to zero even if min and max are not symmetrical.
                 m_TiltAngle = y > 0 ? Mathf.Lerp(0, -m_TiltMin, y) : Mathf.Lerp(0, m_TiltMax, -y);
             }
             else
             {
-                // on platforms with a mouse, we adjust the current angle based on Y mouse input and turn speed
                 m_TiltAngle -= y * m_TurnSpeed;
-                // and make sure the new value is within the tilt range
+
                 m_TiltAngle = Mathf.Clamp(m_TiltAngle, -m_TiltMin, m_TiltMax);
             }
 
-            // Tilt input around X is applied to the pivot (the child of this object)
             m_PivotTargetRot = Quaternion.Euler(m_TiltAngle, m_PivotEulers.y, m_PivotEulers.z);
 
             if (m_TurnSmoothing > 0)

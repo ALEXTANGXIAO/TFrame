@@ -1,0 +1,949 @@
+2022-02-04 11:35:56 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 11:35:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001e0c30 false 0 {0xc000139d60} <nil> {{0 0} {<nil>} map[] 0} 0xc0001e0d00 0x1877fe0 0xc00009cd68 false <nil>}
+2022-02-04 11:35:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x1557c60 Register:0x1557e40] <nil>}
+2022-02-04 11:35:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x1557220 CreateRoom:0x15573c0 JoinRoom:0x1557980] <nil>}
+2022-02-04 11:35:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x1556620 UpdateState:0x15567a0] <nil>}
+2022-02-04 11:35:58 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 11:35:58 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 11:35:58 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:98] Starting UDP Server :54810
+2022-02-04 11:35:58 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:66] GoPoolMgr: &{300 0 1000000000 [] 0 {0 0} 0xc0002067c0 0x154b320 {0 {0 0}} {{} <nil> 0 <nil> 0 <nil>} <nil> 0 0 false}
+2022-02-04 11:40:35 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 11:40:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00020ca90 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc00020cb60 0xc87fe0 0xc000004d80 false <nil>}
+2022-02-04 11:40:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x967c60 Register:0x967e40] <nil>}
+2022-02-04 11:40:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x967220 CreateRoom:0x9673c0 JoinRoom:0x967980] <nil>}
+2022-02-04 11:40:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x966620 UpdateState:0x9667a0] <nil>}
+2022-02-04 11:40:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 11:40:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 11:40:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:98] Starting UDP Server :54810
+2022-02-04 11:40:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:66] GoPoolMgr: &{300 0 1000000000 [] 0 {0 0} 0xc00021c800 0x95b320 {0 {0 0}} {{} <nil> 0 <nil> 0 <nil>} <nil> 0 0 false}
+2022-02-04 11:42:01 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:139] runtime.NumGoroutine() 8
+2022-02-04 11:42:21 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:146] 127.0.0.1:56177
+2022-02-04 11:42:21 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:147]  conn.Read error EOF
+2022-02-04 11:42:21 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 11:42:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:218] Rmv client from Server => 127.0.0.1:56177 Uniid :=> 1   ClientCount => 0
+2022-02-04 11:47:16 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:139] runtime.NumGoroutine() 8
+2022-02-04 11:47:29 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:146] 127.0.0.1:52242
+2022-02-04 11:47:29 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:147]  conn.Read error EOF
+2022-02-04 11:47:29 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 11:47:29 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:218] Rmv client from Server => 127.0.0.1:52242 Uniid :=> 2   ClientCount => 0
+2022-02-04 11:48:57 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:139] runtime.NumGoroutine() 8
+2022-02-04 11:55:25 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 11:55:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00020ad00 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc00020add0 0xb77fe0 0xc000004d80 false <nil>}
+2022-02-04 11:55:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x857c60 Register:0x857e40] <nil>}
+2022-02-04 11:55:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x857220 CreateRoom:0x8573c0 JoinRoom:0x857980] <nil>}
+2022-02-04 11:55:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x856620 UpdateState:0x8567a0] <nil>}
+2022-02-04 11:55:26 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 11:55:26 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 11:55:26 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 11:55:26 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:66] GoPoolMgr: &{300 0 1000000000 [] 0 {0 0} 0xc00021c800 0x84b320 {0 {0 0}} {{} <nil> 0 <nil> 0 <nil>} <nil> 0 0 false}
+2022-02-04 11:55:34 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:138] runtime.NumGoroutine() 8
+2022-02-04 11:55:56 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:145] 127.0.0.1:53516
+2022-02-04 11:55:56 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:146]  conn.Read error EOF
+2022-02-04 11:55:56 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 11:55:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:53516 Uniid :=> 1   ClientCount => 0
+2022-02-04 11:55:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:138] runtime.NumGoroutine() 8
+2022-02-04 11:56:38 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:145] 127.0.0.1:51982
+2022-02-04 11:56:38 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:146]  conn.Read error EOF
+2022-02-04 11:56:38 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 11:56:38 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:51982 Uniid :=> 2   ClientCount => 0
+2022-02-04 11:56:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:138] runtime.NumGoroutine() 8
+2022-02-04 11:57:30 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:145] 127.0.0.1:51997
+2022-02-04 11:57:30 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:146]  conn.Read error EOF
+2022-02-04 11:57:30 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 11:57:30 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:51997 Uniid :=> 3   ClientCount => 0
+2022-02-04 11:57:32 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:138] runtime.NumGoroutine() 8
+2022-02-04 11:57:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52007 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 11:58:19 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 11:58:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000298270 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc000298340 0xca7fe0 0xc00022a408 false <nil>}
+2022-02-04 11:58:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x987c60 Register:0x987e40] <nil>}
+2022-02-04 11:58:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x987220 CreateRoom:0x9873c0 JoinRoom:0x987980] <nil>}
+2022-02-04 11:58:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x986620 UpdateState:0x9867a0] <nil>}
+2022-02-04 11:58:21 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 11:58:21 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 11:58:21 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 11:58:31 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 11:58:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52982 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 18:39:38 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 18:39:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001ff110 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc0001ff1e0 0x1534fe0 0xc000004d80 false <nil>}
+2022-02-04 18:39:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x12169a0 Register:0x1216b00] <nil>}
+2022-02-04 18:39:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x1215f60 CreateRoom:0x1216100 JoinRoom:0x12166c0] <nil>}
+2022-02-04 18:39:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x1215360 UpdateState:0x12154e0] <nil>}
+2022-02-04 18:39:39 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 18:39:39 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 18:39:39 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 18:39:46 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 18:39:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:53801 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 18:39:48 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:39:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53801 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:39:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53801 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 18:40:35 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:53801
+2022-02-04 18:40:35 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 18:40:35 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 18:40:35 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:53801 Uniid :=> 1   ClientCount => 0
+2022-02-04 18:42:37 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:58074 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 18:42:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58074 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58074 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:58074 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 18:42:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58074 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 18:42:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58074 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 18:42:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58074 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 18:42:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58074 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 18:43:41 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 18:43:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000200ea0 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc000200f70 0xd44fe0 0xc000004d80 false <nil>}
+2022-02-04 18:43:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0xa269a0 Register:0xa26b00] <nil>}
+2022-02-04 18:43:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0xa25f60 CreateRoom:0xa26100 JoinRoom:0xa266c0] <nil>}
+2022-02-04 18:43:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0xa25360 UpdateState:0xa254e0] <nil>}
+2022-02-04 18:43:42 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 18:43:42 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 18:43:42 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 18:43:47 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:58668 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 18:43:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58668 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58668 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:58668 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 18:43:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58668 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 18:43:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58668 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 18:43:52 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58668 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 18:43:52 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58668 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:07:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:58668
+2022-02-04 21:07:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:07:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:58668 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:07:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:58668 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:07:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:58668 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:07:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:58668 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:07:09 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:07:56 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:51437
+2022-02-04 21:07:56 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:07:56 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 21:07:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:51437 Uniid :=> 2   ClientCount => 0
+2022-02-04 21:09:06 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:09:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:50584
+2022-02-04 21:09:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:09:18 [EROR] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Client.go:135] Couldn't find actor' 0
+2022-02-04 21:09:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:50584 Uniid :=> 3   ClientCount => 0
+2022-02-04 21:21:01 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 21:21:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000200ea0 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc000200f70 0x11d4fe0 0xc000004d80 false <nil>}
+2022-02-04 21:21:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0xeb6920 Register:0xeb6a80] <nil>}
+2022-02-04 21:21:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0xeb5ee0 CreateRoom:0xeb6080 JoinRoom:0xeb6640] <nil>}
+2022-02-04 21:21:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0xeb52e0 UpdateState:0xeb5460] <nil>}
+2022-02-04 21:21:04 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 21:21:04 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 21:21:04 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 21:21:09 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:56426 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:21:13 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56426 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56426 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:56426 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:21:13 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56426 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:21:13 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56426 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:21:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56426 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:21:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56426 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:21:31 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:56426
+2022-02-04 21:21:31 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:21:31 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56426 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:21:31 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56426 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:21:31 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:56426 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:21:31 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:56426 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:21:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:56438 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:21:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56438 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56438 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:56438 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:21:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56438 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:21:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56438 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:21:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56438 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:21:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56438 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:25:32 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:56438
+2022-02-04 21:25:32 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:25:32 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:56438 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:25:32 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:56438 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:25:32 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:56438 Uniid :=> 2   ClientCount => 0
+2022-02-04 21:25:32 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:56438 Uniid :=> 2   ClientCount => 0
+2022-02-04 21:27:55 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63434 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:27:57 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63434 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63434 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63434 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:27:57 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63434 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:27:57 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63434 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:27:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63434 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:27:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63434 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:41:48 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 21:41:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000200ea0 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc000200f70 0x1734fe0 0xc000004d80 false <nil>}
+2022-02-04 21:41:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x1416900 Register:0x1416a60] <nil>}
+2022-02-04 21:41:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x1415ec0 CreateRoom:0x1416060 JoinRoom:0x1416620] <nil>}
+2022-02-04 21:41:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x14152c0 UpdateState:0x1415440] <nil>}
+2022-02-04 21:41:49 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 21:41:49 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 21:41:49 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 21:41:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57862 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:42:02 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57862 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57862 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57862 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:42:02 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57862 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:42:02 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57862 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:42:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57862 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:42:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57862 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:42:29 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:57862
+2022-02-04 21:42:29 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:42:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57862 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:42:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57862 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:42:29 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:57862 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:42:29 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:57862 Uniid :=> 1   ClientCount => 0
+2022-02-04 21:42:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:51999 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:42:35 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51999 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51999 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:51999 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:42:35 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51999 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:42:35 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51999 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:42:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51999 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:42:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51999 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:43:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:51999
+2022-02-04 21:43:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:43:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51999 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:43:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51999 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:43:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:51999 Uniid :=> 2   ClientCount => 0
+2022-02-04 21:43:19 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:51999 Uniid :=> 2   ClientCount => 0
+2022-02-04 21:50:47 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:50:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52049 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 21:50:53 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52049 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:50:53 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:50:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:50:55 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 21:50:55 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 21:51:02 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52063 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:51:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52063 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52063 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52063 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:51:04 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52063 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:51:04 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52063 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:51:06 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:51:06 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:51:06 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52063 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:51:06 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52063 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:51:07 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:251] Had client Username = nil 👉 123
+2022-02-04 21:51:38 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 10
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52077 requestcode:User actioncode:Login loginPack:<username:"333" password:"333" > 
+2022-02-04 21:51:41 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"333" password:"333" > str:"333" 
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52077 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"333" password:"333" > str:"333" 
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52077 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 51 51 51 18 3 51 51 51 42 3 51 51 51]
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52077 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:51:41 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52077 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:51:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52077 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"333" playerID:"0" > 
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 51 51 51 18 1 48]
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52063 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"333" playerID:"0" > 
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52063 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 51 51 51 18 1 48]
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52077 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"333" playerID:"0" > 
+2022-02-04 21:51:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52077 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 51 51 51 18 1 48]
+2022-02-04 21:55:15 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52049
+2022-02-04 21:55:15 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52049 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52049 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52063 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52063 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52077 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 21:55:15 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52077 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 21:55:15 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52049 Uniid :=> 3   ClientCount => 3
+2022-02-04 21:55:15 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52049 Uniid :=> 3   ClientCount => 3
+2022-02-04 21:58:35 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 21:58:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00020ac30 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc00020ad00 0xc64fe0 0xc000004d80 false <nil>}
+2022-02-04 21:58:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x946900 Register:0x946a60] <nil>}
+2022-02-04 21:58:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x945ec0 CreateRoom:0x946060 JoinRoom:0x946620] <nil>}
+2022-02-04 21:58:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x9452c0 UpdateState:0x945440] <nil>}
+2022-02-04 21:58:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 21:58:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 21:58:36 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 21:58:55 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 21:58:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63556 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 21:58:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63556 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:58:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:58:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:59:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 21:59:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63559 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 21:59:01 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63559 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63559 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:63559 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 21:59:01 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63559 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 21:59:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63559 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 21:59:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 21:59:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 21:59:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63559 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 21:59:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63559 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 21:59:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:63556
+2022-02-04 21:59:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63559 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63559 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 21:59:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:63556 Uniid :=> 1   ClientCount => 1
+2022-02-04 21:59:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:63559
+2022-02-04 21:59:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63559 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 21:59:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63559 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 21:59:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:63559: wsasend: An established connection was aborted by the software in your host machine.
+2022-02-04 21:59:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:63559 Uniid :=> 2   ClientCount => 1
+2022-02-04 21:59:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:63556 Uniid :=> 1   ClientCount => 1
+2022-02-04 21:59:38 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:63559 Uniid :=> 2   ClientCount => 0
+2022-02-04 22:02:35 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:02:37 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:02:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:53883 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:02:38 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:02:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:02:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:02:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:53883 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:02:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:02:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:02:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:02:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:53891 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:02:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:02:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53891 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:02:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53891 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:02:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:53891 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:02:41 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:63556: use of closed network connection
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:02:41 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53891 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:02:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53891 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:02:42 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:63556: use of closed network connection
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53891 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:02:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53891 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:53883
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:63556 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:63556 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:63556: use of closed network connection
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53891 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53891 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:03:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:53883 Uniid :=> 3   ClientCount => 1
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:53891
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:53891: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53891 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:03:18 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53891 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:03:18 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:53891: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:03:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:53891 Uniid :=> 4   ClientCount => 1
+2022-02-04 22:03:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:53891 Uniid :=> 4   ClientCount => 1
+2022-02-04 22:03:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:53883 Uniid :=> 3   ClientCount => 0
+2022-02-04 22:14:18 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60078 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:14:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60078 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60078 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60078 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:14:21 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60078 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:14:21 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60078 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:14:23 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:14:23 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:14:23 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:53883: use of closed network connection
+2022-02-04 22:14:23 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60078 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:14:23 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60078 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:15:00 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:60078
+2022-02-04 22:15:00 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:15:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:53883 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:15:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:53883 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:15:00 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:53883: use of closed network connection
+2022-02-04 22:15:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60078 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:15:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60078 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:15:00 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:60078 Uniid :=> 5   ClientCount => 0
+2022-02-04 22:15:00 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:60078 Uniid :=> 5   ClientCount => 0
+2022-02-04 22:15:23 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52181 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:15:37 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52181 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:15:37 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:15:37 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:15:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:15:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:15:43 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52187 requestcode:User actioncode:Login loginPack:<username:"333" password:"333" > 
+2022-02-04 22:15:45 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"333" password:"333" > str:"333" 
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"333" password:"333" > str:"333" 
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 51 51 51 18 3 51 51 51 42 3 51 51 51]
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52187 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:15:45 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:15:45 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:15:47 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"333" playerID:"0" > 
+2022-02-04 22:15:47 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 51 51 51 18 1 48]
+2022-02-04 22:15:47 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"333" playerID:"0" > 
+2022-02-04 22:15:47 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 51 51 51 18 1 48]
+2022-02-04 22:16:26 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52187
+2022-02-04 22:16:26 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"333" 
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [9 0 0 0 8 2 16 13 42 3 51 51 51]
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"333" 
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [9 0 0 0 8 2 16 13 42 3 51 51 51]
+2022-02-04 22:16:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52187 Uniid :=> 7   ClientCount => 1
+2022-02-04 22:16:26 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52181
+2022-02-04 22:16:26 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:52181: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52181 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:16:26 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52181 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:16:26 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52181: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:16:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52181 Uniid :=> 6   ClientCount => 1
+2022-02-04 22:16:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52181 Uniid :=> 6   ClientCount => 1
+2022-02-04 22:16:26 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52187 Uniid :=> 7   ClientCount => 0
+2022-02-04 22:23:02 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:23:06 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61491 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:23:25 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61491 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:23:25 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:23:25 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61496 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:23:27 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61496 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61496 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"333" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 51 51 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:23:27 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52187: use of closed network connection
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"333" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 51 51 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:23:27 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61496 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:23:28 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:23:28 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61496 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:23:28 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61496 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"333" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 51 51 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:23:29 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52187: use of closed network connection
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"333" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 51 51 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61496 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"333" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:23:29 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61496 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 51 51 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:61496
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52187 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52187 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52187: use of closed network connection
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61496 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61496 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:24:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:61496 Uniid :=> 9   ClientCount => 1
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:61491
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:61491: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61491 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:24:03 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61491 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:24:03 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:61491: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:24:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:61491 Uniid :=> 8   ClientCount => 1
+2022-02-04 22:24:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:61491 Uniid :=> 8   ClientCount => 1
+2022-02-04 22:24:03 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:61496 Uniid :=> 9   ClientCount => 0
+2022-02-04 22:26:50 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-04 22:26:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001d6f70 false 0 {0xc000139d60} <nil> {{0 0} {<nil>} map[] 0} 0xc0001d7040 0x1854fe0 0xc00009cd68 false <nil>}
+2022-02-04 22:26:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x1536900 Register:0x1536a60] <nil>}
+2022-02-04 22:26:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x1535ec0 CreateRoom:0x1536060 JoinRoom:0x1536620] <nil>}
+2022-02-04 22:26:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x15352c0 UpdateState:0x1535440] <nil>}
+2022-02-04 22:26:51 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-04 22:26:51 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-04 22:26:51 [INFO] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-04 22:26:54 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 22:26:55 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57093 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:26:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57093 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:26:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:26:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57096 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:26:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57096 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57096 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:57096 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:26:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57096 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:26:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57096 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:27:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:27:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:27:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57096 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:27:00 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57096 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:27:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:57096
+2022-02-04 22:27:33 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:27:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:27:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:27:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57096 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:27:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57096 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:27:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:57096 Uniid :=> 2   ClientCount => 1
+2022-02-04 22:27:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:57096 Uniid :=> 2   ClientCount => 1
+2022-02-04 22:27:34 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:57093
+2022-02-04 22:27:34 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:27:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:57093 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:27:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:57093 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:27:34 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:57093 Uniid :=> 1   ClientCount => 0
+2022-02-04 22:27:34 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:57093 Uniid :=> 1   ClientCount => 0
+2022-02-04 22:29:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-04 22:29:43 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61077 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:29:44 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61077 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:29:44 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:29:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61080 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:29:46 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61080 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61080 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:61080 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:29:46 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61080 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61080 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:29:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:29:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:29:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:29:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61080 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:29:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61080 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:32:50 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:61077
+2022-02-04 22:32:50 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61080 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61080 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:32:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:61077 Uniid :=> 3   ClientCount => 1
+2022-02-04 22:32:50 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:61080
+2022-02-04 22:32:50 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:61080: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61080 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:32:50 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61080 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:32:50 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:61080: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:32:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:61080 Uniid :=> 4   ClientCount => 1
+2022-02-04 22:32:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:61077 Uniid :=> 3   ClientCount => 1
+2022-02-04 22:32:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:61080 Uniid :=> 4   ClientCount => 0
+2022-02-04 22:39:30 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:39:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:39:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50113 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:39:33 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:39:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:39:33 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:39:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50113 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:39:34 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:39:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:39:34 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50121 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:39:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50121 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50121 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:39:36 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:61077: use of closed network connection
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50121 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:39:36 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50121 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:39:36 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50121 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:39:38 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:61077: use of closed network connection
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50121 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:39:38 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50121 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:50113
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:61077 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:61077 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:61077: use of closed network connection
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50121 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50121 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:40:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:50113 Uniid :=> 5   ClientCount => 1
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:50121
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:50121: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50121 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:40:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50121 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:40:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50121: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:40:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:50121 Uniid :=> 6   ClientCount => 1
+2022-02-04 22:40:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:50113 Uniid :=> 5   ClientCount => 1
+2022-02-04 22:40:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:50121 Uniid :=> 6   ClientCount => 0
+2022-02-04 22:41:35 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:41:38 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50651 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:41:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50651 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:41:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:41:39 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50654 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:41:41 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50654 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50654 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:50654 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:41:41 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50654 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50654 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:41:41 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50113: use of closed network connection
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:41:41 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:41:43 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50113: use of closed network connection
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50654 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:41:43 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50654 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:50651
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50113 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50113 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50113: use of closed network connection
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50654 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50654 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:41:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:50651 Uniid :=> 7   ClientCount => 1
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:50654
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:50654: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50654 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:41:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50654 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:41:59 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50654: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:41:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:50654 Uniid :=> 8   ClientCount => 1
+2022-02-04 22:41:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:50654 Uniid :=> 8   ClientCount => 1
+2022-02-04 22:41:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:50651 Uniid :=> 7   ClientCount => 0
+2022-02-04 22:43:50 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:43:53 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52364 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:43:54 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52364 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:43:54 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:43:54 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52367 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:43:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52367 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:43:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:43:56 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50651: use of closed network connection
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:43:56 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:43:58 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50651: use of closed network connection
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:43:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52367
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:50651 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:50651 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:50651: use of closed network connection
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:44:19 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52367 Uniid :=> 10   ClientCount => 1
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52364
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:52364: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52364 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:44:19 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52364 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:44:19 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52364: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:44:19 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52364 Uniid :=> 9   ClientCount => 1
+2022-02-04 22:44:19 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52367 Uniid :=> 10   ClientCount => 1
+2022-02-04 22:44:19 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52364 Uniid :=> 9   ClientCount => 0
+2022-02-04 22:44:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:44:47 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49951 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:44:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49951 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:44:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:44:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49958 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:44:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49958 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49958 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49958 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:44:51 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52367: use of closed network connection
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:44:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49958 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:44:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49958 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:44:53 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52367: use of closed network connection
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49958 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:44:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49958 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:49951
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52367 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52367 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52367: use of closed network connection
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49958 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49958 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:45:11 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:49951 Uniid :=> 11   ClientCount => 1
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:49958
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:49958: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49958 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:45:11 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49958 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:45:11 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49958: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:45:11 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:49958 Uniid :=> 12   ClientCount => 1
+2022-02-04 22:45:12 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:49951 Uniid :=> 11   ClientCount => 1
+2022-02-04 22:45:12 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:49958 Uniid :=> 12   ClientCount => 0
+2022-02-04 22:45:45 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49981 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:45:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:45:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49981 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:45:49 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:45:49 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:45:51 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49951: use of closed network connection
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49985 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:45:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:49985 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:45:51 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:45:51 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:45:53 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49951: use of closed network connection
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:45:53 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:49985
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49951 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49951 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49951: use of closed network connection
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:46:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:49985 Uniid :=> 14   ClientCount => 1
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:49981
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:49981: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49981 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:46:40 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49981 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:46:40 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49981: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:46:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:49981 Uniid :=> 13   ClientCount => 1
+2022-02-04 22:46:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:49981 Uniid :=> 13   ClientCount => 1
+2022-02-04 22:46:40 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:49985 Uniid :=> 14   ClientCount => 0
+2022-02-04 22:47:39 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:47:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52692 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:47:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52692 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:47:42 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:47:42 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52695 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:47:44 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52695 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:47:44 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:47:44 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49985: use of closed network connection
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:47:44 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:47:46 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49985: use of closed network connection
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:47:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52695
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:49985 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:49985 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:49985: use of closed network connection
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:48:14 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52695 Uniid :=> 16   ClientCount => 1
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:52692
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52692 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:48:14 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52692 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:48:14 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52692: wsasend: An established connection was aborted by the software in your host machine.
+2022-02-04 22:48:14 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:52692 Uniid :=> 15   ClientCount => 1
+2022-02-04 22:48:14 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52692 Uniid :=> 15   ClientCount => 1
+2022-02-04 22:48:14 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:52695 Uniid :=> 16   ClientCount => 0
+2022-02-04 22:48:53 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 8
+2022-02-04 22:48:56 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 9
+2022-02-04 22:48:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60174 requestcode:User actioncode:Login loginPack:<username:"111" password:"111" > 
+2022-02-04 22:48:58 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:48:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"111" password:"111" > str:"111" 
+2022-02-04 22:48:58 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 49 49 18 3 49 49 49 42 3 49 49 49]
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60174 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:48:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60171 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-04 22:48:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60171 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60171 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:60171 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:48:59 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60171 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:48:59 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60171 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:49:01 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52695: use of closed network connection
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > 
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [24 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48]
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:49:01 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52695: use of closed network connection
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60171 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > 
+2022-02-04 22:49:01 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60171 send buff:  [34 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48]
+2022-02-04 22:51:44 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 10
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:51617 requestcode:User actioncode:Login loginPack:<username:"fff" password:"fff" > 
+2022-02-04 22:51:46 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"fff" password:"fff" > str:"fff" 
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51617 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"fff" password:"fff" > str:"fff" 
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51617 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 102 102 102 18 3 102 102 102 42 3 102 102 102]
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:51617 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-04 22:51:46 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51617 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-04 22:51:46 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51617 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"fff" playerID:"0" > 
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [44 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 102 102 102 18 1 48]
+2022-02-04 22:51:48 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52695: use of closed network connection
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"fff" playerID:"0" > 
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [44 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 102 102 102 18 1 48]
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60171 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"fff" playerID:"0" > 
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60171 send buff:  [44 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 102 102 102 18 1 48]
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51617 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"111" playerID:"0" > playerpack:<playername:"123" playerID:"0" > playerpack:<playername:"fff" playerID:"0" > 
+2022-02-04 22:51:48 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51617 send buff:  [44 0 0 0 8 2 16 10 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 49 49 18 1 48 58 8 10 3 49 50 51 18 1 48 58 8 10 3 102 102 102 18 1 48]
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:60171
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error EOF
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52695 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52695 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:52695: use of closed network connection
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60171 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60171 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51617 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"123" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51617 send buff:  [9 0 0 0 8 2 16 13 42 3 49 50 51]
+2022-02-04 22:56:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:60171 Uniid :=> 17   ClientCount => 2
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:169] 127.0.0.1:60174
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:170]  conn.Read error read tcp 127.0.0.1:54809->127.0.0.1:60174: wsarecv: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:60174 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:60174 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:56:20 [EMER] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:84] write tcp 127.0.0.1:54809->127.0.0.1:60174: wsasend: An existing connection was forcibly closed by the remote host.
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:51617 send mainpack:  requestcode:Room actioncode:UpCharacterList str:"111" 
+2022-02-04 22:56:20 [CRIT] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:51617 send buff:  [9 0 0 0 8 2 16 13 42 3 49 49 49]
+2022-02-04 22:56:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/room.go:59] Rmv client from Room => 127.0.0.1:60174 Uniid :=> 18   ClientCount => 2
+2022-02-04 22:56:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:60171 Uniid :=> 17   ClientCount => 2
+2022-02-04 22:56:20 [DEBG] [c:/Users/Administrator/Desktop/github/RollSys/GameServer/App/Server.go:217] Rmv client from Server => 127.0.0.1:60174 Uniid :=> 18   ClientCount => 1
+2022-02-23 15:52:03 [INFO] [G:/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-02-23 15:52:03 [DEBG] [G:/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000203040 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc000203110 0xa51fe0 0xc000004d80 false <nil>}
+2022-02-23 15:52:03 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0x6cc2c0 Register:0x6cc3c0] <nil>}
+2022-02-23 15:52:03 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0x6cb980 CreateRoom:0x6cbac0 JoinRoom:0x6cbee0] <nil>}
+2022-02-23 15:52:03 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0x6caee0 UpdateState:0x6cb020] <nil>}
+2022-02-23 15:52:03 [INFO] [G:/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-02-23 15:52:03 [INFO] [G:/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-02-23 15:52:03 [INFO] [G:/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809
+2022-02-23 15:52:14 [DEBG] [G:/github/RollSys/GameServer/App/Server.go:162] runtime.NumGoroutine() 7
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52037 requestcode:User actioncode:Login loginPack:<username:"123" password:"123" > 
+2022-02-23 15:52:17 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:105] requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52037 send mainpack:  requestcode:User actioncode:Login returncode:Success loginPack:<username:"123" password:"123" > str:"123" 
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52037 send buff:  [23 0 0 0 8 1 16 2 24 1 34 10 10 3 49 50 51 18 3 49 50 51 42 3 49 50 51]
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:40] Receive from client: 127.0.0.1:52037 requestcode:Room actioncode:JoinRoom str:"1" 
+2022-02-23 15:52:17 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:105] requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52037 send mainpack:  requestcode:Room actioncode:JoinRoom returncode:Success str:"1" 
+2022-02-23 15:52:17 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52037 send buff:  [9 0 0 0 8 2 16 6 24 1 42 1 49]
+2022-02-23 15:52:19 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:77] 127.0.0.1:52037 send mainpack:  requestcode:Room actioncode:Starting playerpack:<playername:"123" playerID:"0" > 
+2022-02-23 15:52:19 [CRIT] [G:/github/RollSys/GameServer/App/DataCenter.go:79] 127.0.0.1:52037 send buff:  [14 0 0 0 8 2 16 10 58 8 10 3 49 50 51 18 1 48]
+2022-03-08 16:31:13 [INFO] [G:/github/RollSys/GameServer/Common/database.go:36] Connect MySql Success!
+2022-03-08 16:31:14 [DEBG] [G:/github/RollSys/GameServer/main.go:37] InitDB:  &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00020cd00 false 0 {0xc000165db0} <nil> {{0 0} {<nil>} map[] 0} 0xc00020cdd0 0xfa1fe0 0xc000004d80 false <nil>}
+2022-03-08 16:31:14 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {User User map[Login:0xc1c2c0 Register:0xc1c3c0] <nil>}
+2022-03-08 16:31:14 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {Room Room map[Chat:0xc1b980 CreateRoom:0xc1bac0 JoinRoom:0xc1bee0] <nil>}
+2022-03-08 16:31:14 [DEBG] [G:/github/RollSys/GameServer/App/controller.go:71] RegisterController {Game Game map[UpPos:0xc1aee0 UpdateState:0xc1b020] <nil>}
+2022-03-08 16:31:14 [INFO] [G:/github/RollSys/GameServer/App/Server.go:47] Starting Game Server
+2022-03-08 16:31:14 [INFO] [G:/github/RollSys/GameServer/App/Server.go:97] Starting UDP Server :54810
+2022-03-08 16:31:14 [INFO] [G:/github/RollSys/GameServer/App/Server.go:56] Starting TCP Server :54809

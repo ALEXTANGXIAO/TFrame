@@ -6,10 +6,6 @@ public class ECSInputCmpt : ECSComponent, IUpdate
     #region 属性
 
     private float m_Speed = 3f;
-    float m_TurnAmount;
-    float m_ForwardAmount;
-    float m_MovingTurnSpeed = 360;
-    float m_StationaryTurnSpeed = 180;
 
     public Transform MainCameraTrans;
     private Vector3 m_CamForward;
@@ -71,6 +67,11 @@ public class ECSInputCmpt : ECSComponent, IUpdate
             Move.Normalize();
         }
 
-        ECSEventHelper.Send(Entity,ActorEventDefine.ActorMove, Move);
+        ECSEventHelper.Send(Entity, ActorEventDefine.ActorMove, Move);
+
+        if (Jump)
+        {
+            ECSEventHelper.Send(Entity, ActorEventDefine.ActorJump, Jump);
+        }
     }
 }

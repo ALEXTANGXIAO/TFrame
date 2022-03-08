@@ -11,11 +11,14 @@ public class GameData
         public int Progress;
         public Vector3 Pos;
         public Vector3 Dir;
+        public Vector3 Move;
+        public ActorEntity ActorEntity;
 
         public PlayerData()
         {
             Pos = Vector3.zero;
             Dir = Vector3.zero;
+            Move = Vector3.zero;
         }
     }
 
@@ -75,6 +78,13 @@ public class GameLogic
         {
             return;
         }
+
+        data.Move = new Vector3(cmd.X,cmd.Y,cmd.Z);
+
+        data.ActorEntity?.Event.Send<Vector3>(ActorEventDefine.ActorMove, data.Move);
+
+        return;
+
         var dir = cmd.Sid;
 
         if (InputDefined.Forward == dir)

@@ -1,0 +1,15 @@
+server:
+  port: 5000
+  TCPPort: :54809
+  UDPPort: :54810
+datasource:
+  driverName: mysql
+  host: 47.106.96.238
+  port: 3306
+  database: tgame
+  username: root
+  password: txtx54TX!
+  charset: utf8
+GoPool:
+  Open: false
+  poolSize: 300

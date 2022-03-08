@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scripts/Core/NetFrame/Scenes/LodingScene.unity
     guid: 9a1050417c75abe4facf49c67476af8a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scripts/Core/NetFrame/Scenes/GameScene.unity
     guid: 15c5be52f4d264a4dba2e80fa064081c
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: fc2e5d90326a6734ea6c7b5492ef8733
+  - enabled: 1
+    path: Assets/Scripts/Core/NetFrame/Scenes/GameScene2.unity
+    guid: eaf792f747c2eb745965d99c323dede7
   m_configObjects: {}
