@@ -6,6 +6,31 @@ sealed partial class GameApp
 {
     public int TargetFrameRate = 60;
 
+    public enum HostPoint
+    {
+        LinuxServer,
+        WinServer,
+        LocalHost,
+    }
+
+    public HostPoint hostPoint = HostPoint.LocalHost;
+    public string Host
+    {
+        get
+        {
+            switch (hostPoint)
+            {
+                case (HostPoint.LocalHost):
+                    return "127.0.0.1";
+                case (HostPoint.LinuxServer):
+                    return "1.12.241.46";
+                case (HostPoint.WinServer):
+                    return "1.14.132.143";
+            }
+            return "127.0.0.1";
+        }
+    }
+
     private void SetTargetFrameRate()
     {
         Application.targetFrameRate = TargetFrameRate;

@@ -7,7 +7,7 @@ public class MsgUI : UIWindow
     protected override void RegisterEvent()
     {
         base.RegisterEvent();
-        AddUIEvent<string>(TipsEvent.Log, TipsUI.Instance.Show);
+        GameEventMgr.Instance.AddEventListener<string>(TipsEvent.Log, TipsUI.Instance.Show);
     }
 }
 

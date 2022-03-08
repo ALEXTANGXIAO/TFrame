@@ -117,10 +117,7 @@ public class UIWindowBase : UIBase
         }
 
         m_destroyed = true;
-        //DLogger.Debug("destroy window or widget: {0}", GetType().Name);
 
-        ///关闭注册的消息
-        ClearAllRegisterEvent();
         OnDestroy();
         DestroyAllChild();
 

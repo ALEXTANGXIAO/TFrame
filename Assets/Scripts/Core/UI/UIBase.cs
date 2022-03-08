@@ -66,7 +66,7 @@ public class UIBase
         while (element.MoveNext())
         {
             var m_event = element.Current.Value;
-            GameEventMgr.Instance.RemoveListener(element.Current.Key, m_event);
+            //GameEventMgr.Instance.RemoveEventListener(element.Current.Key, m_event);
         }
         m_eventTable.Clear();
     }
@@ -74,31 +74,25 @@ public class UIBase
     protected void AddUIEvent(int eventType, Action handler)
     {
         m_eventTable.Add(eventType,handler);
-        EventMgr.AddUIEvent(eventType, handler);
+        EventMgr.AddEventListener(eventType, handler);
     }
 
     protected void AddUIEvent<T>(int eventType, Action<T> handler)
     {
         m_eventTable.Add(eventType, handler);
-        EventMgr.AddUIEvent(eventType, handler);
+        EventMgr.AddEventListener(eventType, handler);
     }
 
     protected void AddUIEvent<T, U>(int eventType, Action<T, U> handler)
     {
         m_eventTable.Add(eventType, handler);
-        EventMgr.AddUIEvent(eventType, handler);
+        EventMgr.AddEventListener(eventType, handler);
     }
 
     protected void AddUIEvent<T, U, V>(int eventType, Action<T, U, V> handler)
     {
         m_eventTable.Add(eventType, handler);
-        EventMgr.AddUIEvent(eventType, handler);
-    }
-
-    protected void AddUIEvent<T, U, V, W>(int eventType, Action<T, U, V, W> handler)
-    {
-        m_eventTable.Add(eventType, handler);
-        EventMgr.AddUIEvent(eventType, handler);
+        EventMgr.AddEventListener(eventType, handler);
     }
     #endregion
 }

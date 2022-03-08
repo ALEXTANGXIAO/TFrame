@@ -83,4 +83,9 @@ public class UISys : BaseLogicSys<UISys>
 
         controller.ResigterUIEvent();
     }
+
+    public static void ShowTipMsg(string str)
+    {
+
+    }
 }

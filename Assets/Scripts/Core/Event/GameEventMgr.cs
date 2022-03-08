@@ -7,161 +7,170 @@ using UnityEngine;
 /// </summary>
 public class GameEventMgr:Singleton<GameEventMgr>
 {
-    private bool m_isInit = false;
-    private Dictionary<int, Delegate> m_eventDic = new Dictionary<int, Delegate>();
-    private Dictionary<int, EventData> m_eventTable = new Dictionary<int, EventData>();
+    private Dictionary<int, IEventInfo> m_eventDic = new Dictionary<int, IEventInfo>();
 
-    public void OnInit()
+    #region AddEventListener
+    public void AddEventListener<T>(int eventid, Action<T> action)
     {
-        if (m_isInit)
+        if (m_eventDic.ContainsKey(eventid))
         {
-            return;
+            (m_eventDic[eventid] as EventInfo<T>).actions += action;
         }
-
-        m_isInit = true;
+        else
+        {
+            m_eventDic.Add(eventid, new EventInfo<T>(action));
+        }
     }
 
-    public void Destroy()
+    public void AddEventListener<T, U>(int eventid, Action<T, U> action)
     {
-        if (!m_isInit)
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo<T, U>).actions += action;
+        }
+        else
+        {
+            m_eventDic.Add(eventid, new EventInfo<T, U>(action));
+        }
+    }
+
+    public void AddEventListener<T, U, W>(int eventid, Action<T, U, W> action)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo<T, U, W>).actions += action;
+        }
+        else
+        {
+            m_eventDic.Add(eventid, new EventInfo<T, U, W>(action));
+        }
+    }
+
+    public void AddEventListener(int eventid, Action action)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo).actions += action;
+        }
+        else
+        {
+            m_eventDic.Add(eventid, new EventInfo(action));
+        }
+    }
+    #endregion
+
+    #region RemoveEventListener
+    public void RemoveEventListener<T>(int eventid, Action<T> action)
+    {
+        if (action == null)
         {
             return;
         }
 
-        var element = m_eventDic.GetEnumerator();
-        while (element.MoveNext())
+        if (m_eventDic.ContainsKey(eventid))
         {
-            var m_event = element.Current.Value;
-            RemoveListener(element.Current.Key, m_event);
+            (m_eventDic[eventid] as EventInfo<T>).actions -= action;
         }
+    }
+
+    public void RemoveEventListener<T, U>(int eventid, Action<T, U> action)
+    {
+        if (action == null)
+        {
+            return;
+        }
+
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo<T, U>).actions -= action;
+        }
+    }
+
+    public void RemoveEventListener<T, U, W>(int eventid, Action<T, U, W> action)
+    {
+        if (action == null)
+        {
+            return;
+        }
+
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo<T, U, W>).actions -= action;
+        }
+    }
+
+    public void RemoveEventListener(int eventid, Action action)
+    {
+        if (action == null)
+        {
+            return;
+        }
+
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            (m_eventDic[eventid] as EventInfo).actions -= action;
+        }
+    }
+    #endregion
+
+    #region Send
+    public void Send<T>(int eventid, T info)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            var eventInfo = (m_eventDic[eventid] as EventInfo<T>);
+            if (eventInfo != null)
+            {
+                eventInfo.actions.Invoke(info);
+            }
+        }
+    }
+
+    public void Send<T, U>(int eventid, T info, U info2)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            var eventInfo = (m_eventDic[eventid] as EventInfo<T, U>);
+            if (eventInfo != null)
+            {
+                eventInfo.actions.Invoke(info, info2);
+            }
+        }
+    }
+
+    public void Send<T, U, W>(int eventid, T info, U info2, W info3)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            var eventInfo = (m_eventDic[eventid] as EventInfo<T, U, W>);
+            if (eventInfo != null)
+            {
+                eventInfo.actions.Invoke(info, info2, info3);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 事件触发 无参
+    /// </summary>
+    /// <param name="name"></param>
+    public void Send(int eventid)
+    {
+        if (m_eventDic.ContainsKey(eventid))
+        {
+            var eventInfo = (m_eventDic[eventid] as EventInfo);
+            if (eventInfo != null)
+            {
+                eventInfo.actions.Invoke();
+            }
+        }
+    }
+    #endregion
+
+    #region Clear
+    public void Clear()
+    {
         m_eventDic.Clear();
-        m_eventTable.Clear();
     }
-
-
-    #region 接口
-    #endregion
-    private void AddEvent(int eventType, Delegate handler)
-    {
-        m_eventDic.Add(eventType,handler);
-    }
-
-    public void AddUIEvent(int eventType, Action handler)
-    {
-        if (AddListener(eventType, handler))
-        {
-            AddEvent(eventType, handler);
-        }
-    }
-    public void AddUIEvent<T>(int eventType, Action<T> handler)
-    {
-        if (AddListener(eventType, handler))
-        {
-            AddEvent(eventType, handler);
-        }
-    }
-
-    public void AddUIEvent<T, U>(int eventType, Action<T, U> handler)
-    {
-        if (AddListener(eventType, handler))
-        {
-            AddEvent(eventType, handler);
-        }
-    }
-
-    public void AddUIEvent<T, U, V>(int eventType, Action<T, U, V> handler)
-    {
-        if (AddListener(eventType, handler))
-        {
-            AddEvent(eventType, handler);
-        }
-    }
-
-    public void AddUIEvent<T, U, V, W>(int eventType, Action<T, U, V, W> handler)
-    {
-        if (AddListener(eventType, handler))
-        {
-            AddEvent(eventType, handler);
-        }
-    }
-
-    #region 监听接口
-    public bool AddListener(int eventType, Delegate handler)
-    {
-        EventData data;
-        if (!m_eventTable.TryGetValue(eventType, out data))
-        {
-            data = new EventData(eventType);
-            m_eventTable.Add(eventType, data);
-        }
-
-        return data.AddHandler(handler);
-    }
-
-
-    public void RemoveListener(int eventId, Delegate handler)
-    {
-        if (handler == null)
-        {
-            return;
-        }
-
-        EventData data;
-        if (m_eventTable.TryGetValue(eventId, out data))
-        {
-            data.RmvHandler(handler);
-        }
-    }
-
-
-    #endregion
-
-    #region 事件分发接口
-
-    public void Send(int eventType)
-    {
-        EventData d;
-        if (m_eventTable.TryGetValue(eventType, out d))
-        {
-            d.Callback();
-        }
-    }
-
-    public void Send<T>(int eventType, T arg1)
-    {
-        EventData d;
-        if (m_eventTable.TryGetValue(eventType, out d))
-        {
-            d.Callback(arg1);
-        }
-    }
-
-    public void Send<T, U>(int eventType, T arg1, U arg2)
-    {
-        EventData d;
-        if (m_eventTable.TryGetValue(eventType, out d))
-        {
-            d.Callback(arg1, arg2);
-        }
-    }
-
-    public void Send<T, U, V>(int eventType, T arg1, U arg2, V arg3)
-    {
-        EventData d;
-        if (m_eventTable.TryGetValue(eventType, out d))
-        {
-            d.Callback(arg1, arg2, arg3);
-        }
-    }
-
-    public void Send<T, U, V, W>(int eventType, T arg1, U arg2, V arg3, W arg4)
-    {
-        EventData d;
-        if (m_eventTable.TryGetValue(eventType, out d))
-        {
-            d.Callback(arg1, arg2, arg3, arg4);
-        }
-    }
-
     #endregion
 }
