@@ -104,10 +104,10 @@ public sealed partial class UIManager : Singleton<UIManager>
         for (int i = 0; i < allList.Count; i++)
         {
             UIWindow window = allList[i];
-            //if (!window.IsDestroyed)
-            //{
-            //    window.Update();
-            //}
+            if (!window.IsDestroyed)
+            {
+                window.Update();
+            }
         }
     }
 
@@ -130,7 +130,7 @@ public sealed partial class UIManager : Singleton<UIManager>
         return m_tmpWindowList;
     }
 
-    #region MyRegion
+    #region Methods
     public T ShowWindow<T>() where T : UIWindow, new()
     {
         string typeName = GetWindowTypeName<T>();
@@ -217,7 +217,7 @@ public sealed partial class UIManager : Singleton<UIManager>
         RectTransform rectTrans = uiGo.transform as RectTransform;
         if (window.NeedCenterUI())
         {
-            rectTrans.localPosition = new Vector3(0, 0, 0);
+            rectTrans.SetMax(); //localPosition = new Vector3(0, 0, 0);
         }
 
         rectTrans.localRotation = Quaternion.identity;
@@ -231,7 +231,6 @@ public sealed partial class UIManager : Singleton<UIManager>
                 Object.Destroy(uiGo);
                 uiGo = null;
             }
-
             return false;
         }
 
@@ -302,8 +301,6 @@ public sealed partial class UIManager : Singleton<UIManager>
 
     private void ShowTopUI(UIWindowStack stack)
     {
-        bool blurCam = false;
-
         if (stack.m_windowList.Count > 0)
         {
             bool hasTop = false;

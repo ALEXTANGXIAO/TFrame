@@ -30,10 +30,13 @@ sealed partial class GameApp : UnitySingleton<GameApp>
         else
         {
             var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
+            entity.AddComponent<ECSShaderCmpt>();
             entity.AddComponent<ECSInputCmpt>();
             entity.AddComponent<ECSMoveCmpt>();
             entity.AddComponent<ECSAnimatorCmpt>();
             Debug.Log(entity.ToString());
+
+            entity.Event.Send(ActorEventDefine.SetBodyMaterial, ResMgr.Instance.Load<Material>("Dino/Materials/Dino_Color/Dino_03"));
         }
 
         //StartCoroutine(Test(entity));
