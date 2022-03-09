@@ -66,10 +66,17 @@ public class JoyStickUI : UIWindow
             (data as PointerEventData).position,               //当前屏幕鼠标位置
             (data as PointerEventData).pressEventCamera,                //UI摄像机
             out localPos);                                              //相对坐标
+
+        localPos = localPos.normalized;
+
+        InputSys.SetAxis("Mouse X", localPos.x * 2);
+        InputSys.SetAxis("Mouse Y", localPos.y/3);
     }
 
     private void MovePointerUp(BaseEventData data)
     {
+        InputSys.SetAxis("Mouse X", 0);
+        InputSys.SetAxis("Mouse Y", 0);
         //EventCenter.Instance.EventTrigger<Vector2>(InputEvent.JoyScreenMove, Vector2.zero);
     }
 

@@ -190,7 +190,8 @@ public class UIWindow: UIWindowBase
         {
             case ModalType.NormalType:
             {
-                break;
+                m_modalAlpha = 0f;
+                    break;
             }
             case ModalType.NormalHaveClose:
             {

@@ -37,6 +37,10 @@ sealed partial class GameApp : UnitySingleton<GameApp>
             Debug.Log(entity.ToString());
 
             entity.Event.Send(ActorEventDefine.SetBodyMaterial, ResMgr.Instance.Load<Material>("Dino/Materials/Dino_Color/Dino_03"));
+
+#if UNITY_ANDROID
+            UISys.Mgr.ShowWindow<JoyStickUI>();
+#endif
         }
 
         //StartCoroutine(Test(entity));

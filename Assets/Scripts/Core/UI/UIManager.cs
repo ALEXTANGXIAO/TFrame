@@ -190,7 +190,7 @@ public sealed partial class UIManager : Singleton<UIManager>
 
     private bool CreateWindowByType(UIWindow window, string typeName)
     {
-        ///先判断是否有缓存
+        //先判断是否有缓存
         GameObject uiGo = null;
 
         string resPath = GetUIResourcePath(typeName);
