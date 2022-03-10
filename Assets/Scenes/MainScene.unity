@@ -282,7 +282,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
       propertyPath: visualiseInEditor
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
+      propertyPath: sphereCastRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
+      propertyPath: clipMoveTime
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f146a51eee9a4bb46957ffd2933c5cb5, type: 3}
