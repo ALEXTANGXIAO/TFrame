@@ -8,7 +8,7 @@ sealed partial class GameApp : UnitySingleton<GameApp>
     public EcsGameSystem EcsGameSystem = new EcsGameSystem();
     public GameObject Player;
     public bool LocalGame;
-
+    public Transform StartPown;
     public override void Awake()
     {
         base.Awake();
@@ -30,13 +30,17 @@ sealed partial class GameApp : UnitySingleton<GameApp>
         else
         {
             var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, Instantiate(Player), true);
+            if (GameApp.Instance.StartPown != null)
+            {
+                entity.gameObject.transform.position = new Vector3(0,4, 0);
+            }
             entity.AddComponent<ECSShaderCmpt>();
             entity.AddComponent<ECSInputCmpt>();
             entity.AddComponent<ECSMoveCmpt>();
             entity.AddComponent<ECSAnimatorCmpt>();
             Debug.Log(entity.ToString());
 
-            entity.Event.Send(ActorEventDefine.SetBodyMaterial, ResMgr.Instance.Load<Material>("Dino/Materials/Dino_Color/Dino_03"));
+            //entity.Event.Send(ActorEventDefine.SetBodyMaterial, ResMgr.Instance.Load<Material>("Dino/Materials/Dino_Color/Dino_03"));
 
 #if UNITY_ANDROID
             UISys.Mgr.ShowWindow<JoyStickUI>();

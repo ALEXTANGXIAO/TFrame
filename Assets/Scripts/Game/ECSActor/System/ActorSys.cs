@@ -30,6 +30,10 @@ public class ActorSys : BaseLogicSys<ActorSys>
 
             var gameObject = Object.Instantiate(PlayerPerfab);
             var entity = EcsFactory.Instance.CreateActorEntity(ActorType.PlayerActor, gameObject);
+            if (GameApp.Instance.StartPown!= null)
+            {
+                entity.gameObject.transform.position = new Vector3(GameApp.Instance.StartPown.position.x, 4, GameApp.Instance.StartPown.position.z);
+            }
             if (pack.Playername.Equals(LoginDataMgr.Instance.m_userName))
             {
                 entity.AddComponent<ECSInputCmpt>();
