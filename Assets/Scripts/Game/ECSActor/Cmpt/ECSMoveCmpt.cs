@@ -12,6 +12,8 @@ public class ECSMoveCmpt : ECSComponent,IFixedUpdate
     float m_MovingTurnSpeed = 360;
     float m_StationaryTurnSpeed = 180;
     Rigidbody m_Rigidbody;
+    private bool m_isJump = false;
+    private float m_JumpPower = 12f;
     public override void Awake()
     {
         actorEntity = Entity as ActorEntity;
@@ -24,6 +26,12 @@ public class ECSMoveCmpt : ECSComponent,IFixedUpdate
         m_Rigidbody = actorEntity.gameObject.GetComponent<Rigidbody>();
 
         Entity.Event.AddEventListener<Vector3>(ActorEventDefine.ActorMove, ActorMove);
+        Entity.Event.AddEventListener<bool>(ActorEventDefine.ActorJump, Jump);
+    }
+
+    private void Jump(bool isJump)
+    {
+        m_isJump = isJump;
     }
 
     public void ActorMove(Vector3 vector3)
@@ -55,7 +63,24 @@ public class ECSMoveCmpt : ECSComponent,IFixedUpdate
 
         m_ForwardAmount = Move.z;
 
-        actorEntity.transform.Translate(Move);
+        if (m_Rigidbody != null)
+        {
+            if (!m_isJump)
+            {
+                actorEntity.transform.Translate(Move);
+            }
+            else
+            {
+                m_isJump = false;
+
+                actorEntity.transform.Translate(Move);
+                m_Rigidbody.velocity = Vector3.up * m_JumpPower;
+            }
+        }
+        else
+        {
+            actorEntity.transform.Translate(Move);
+        }
 
         ApplyExtraTurnRotation();
     }
