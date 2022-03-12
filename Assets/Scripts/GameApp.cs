@@ -12,6 +12,10 @@ sealed partial class GameApp : UnitySingleton<GameApp>
     public override void Awake()
     {
         base.Awake();
+
+        Debug.Log(DevicePerformanceUtil.GetDevicePerformanceLevel());
+
+        //DevicePerformanceUtil.ModifySettingsBasedOnPerformance();
         InitLibImp();
         RegistAllSystem();
         SetTargetFrameRate();

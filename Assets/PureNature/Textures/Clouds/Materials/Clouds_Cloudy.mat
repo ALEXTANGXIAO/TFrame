@@ -39,8 +39,8 @@ Material:
     - _UseFog: 1
     - _ViewDistance: 10000
     - __dirty: 0
-    - _cloudsHeight: 2000
-    - _cloudsPosition: 1025
+    - _cloudsHeight: 1500
+    - _cloudsPosition: 1030
     m_Colors:
     - _CloudsColor: {r: 0.366901, g: 0.68220174, b: 0.9150943, a: 1}
     - _DirectionSpeed: {r: 6.5, g: 7.8, b: 5.2, a: -7}
