@@ -41,6 +41,8 @@ public class ActorSys : BaseLogicSys<ActorSys>
                 gameObject.tag = "Player";
                 entity.AddComponent<ECSMoveCmpt>();
                 entity.AddComponent<ECSAnimatorCmpt>();
+
+                GameEventMgr.Instance.Send<bool>(StringId.StringToHash("CanControl"),true);
             }
             else
             {

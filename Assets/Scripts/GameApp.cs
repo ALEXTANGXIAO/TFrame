@@ -16,6 +16,7 @@ sealed partial class GameApp : UnitySingleton<GameApp>
         Debug.Log(DevicePerformanceUtil.GetDevicePerformanceLevel());
 
         //DevicePerformanceUtil.ModifySettingsBasedOnPerformance();
+        
         InitLibImp();
         RegistAllSystem();
         SetTargetFrameRate();

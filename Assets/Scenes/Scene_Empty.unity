@@ -551,7 +551,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: 0
     m_Strength: 1
     m_Bias: 0.036
@@ -589,7 +589,7 @@ Light:
   m_BounceIntensity: 1.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 5.661e-42, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 2.6059e-41, z: 0, w: 0.0000000037252903}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -640,11 +640,11 @@ MonoBehaviour:
   baseWindSpeed: 1
   burstsPower: 2
   burstsSpeed: 5
-  burstsScale: 7
+  burstsScale: 1
   microPower: 0.1
   microSpeed: 1
-  microFrequency: 3
-  renderDistance: 30
+  microFrequency: 2
+  renderDistance: 40
   showWind: 0
 --- !u!4 &752752589
 Transform:
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_TurnSmoothing: 6
   m_TiltMax: 75
   m_TiltMin: 45
-  m_LockCursor: 1
+  m_LockCursor: 0
   m_VerticalAutoReturn: 0
 --- !u!54 &1649414116
 Rigidbody:
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e693957e581b4e14cacf00155e24b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSamples: 50
-  volumeSize: 1500
+  volumeSamples: 100
+  volumeSize: 2000
   quadMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   cloudsMaterial: {fileID: 2100000, guid: 8c63f4b65ae83ed40af3771125d7f48c, type: 2}
