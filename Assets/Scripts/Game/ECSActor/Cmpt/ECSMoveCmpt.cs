@@ -14,6 +14,7 @@ public class ECSMoveCmpt : ECSComponent,IFixedUpdate
     Rigidbody m_Rigidbody;
     private bool m_isJump = false;
     private float m_JumpPower = 12f;
+    private float m_MoveSpeed = 2f;
     public override void Awake()
     {
         actorEntity = Entity as ActorEntity;
@@ -67,19 +68,19 @@ public class ECSMoveCmpt : ECSComponent,IFixedUpdate
         {
             if (!m_isJump)
             {
-                actorEntity.transform.Translate(Move);
+                actorEntity.transform.Translate(Move * m_MoveSpeed);
             }
             else
             {
                 m_isJump = false;
 
-                actorEntity.transform.Translate(Move);
+                actorEntity.transform.Translate(Move * m_MoveSpeed);
                 m_Rigidbody.velocity = Vector3.up * m_JumpPower;
             }
         }
         else
         {
-            actorEntity.transform.Translate(Move);
+            actorEntity.transform.Translate(Move * m_MoveSpeed);
         }
 
         ApplyExtraTurnRotation();

@@ -31,20 +31,20 @@ public class ECSInputCmpt : ECSComponent, IUpdate
 
         if (Splash)
         {
-            Horizontal = InputSys.GetAxis("Horizontal");
+            Horizontal = InputSys.GetAxis("Horizontal") / 2;
         }
         else
         {
-            Horizontal = InputSys.GetAxis("Horizontal") / 2;
+            Horizontal = InputSys.GetAxis("Horizontal");
         }
 
         if (Splash)
         {
-            Vertical = InputSys.GetAxis("Vertical");
+            Vertical = InputSys.GetAxis("Vertical") / 2;
         }
         else
         {
-            Vertical = InputSys.GetAxis("Vertical") / 2;
+            Vertical = InputSys.GetAxis("Vertical");
         }
 
         Jump = Input.GetKeyDown(KeyCode.Space);

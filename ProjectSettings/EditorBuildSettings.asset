@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scripts/Core/NetFrame/Scenes/GameScene2.unity
     guid: eaf792f747c2eb745965d99c323dede7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_Demo.unity
     guid: 0320b412c5b094a4294f683e73f8f1d2
+  - enabled: 1
+    path: Assets/Scenes/Scene_Empty.unity
+    guid: 4c6ae2ccf9ab4394faaf34d74192ccd4
   m_configObjects: {}
