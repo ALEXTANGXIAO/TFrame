@@ -27,7 +27,8 @@ namespace UnityStandardAssets.Cameras
         private Quaternion m_PivotTargetRot;
         private Quaternion m_TransformTargetRot;
 
-        private bool canControl = false;
+        private bool canControl = true;
+        public bool CheckGameApp;
 
         protected override void Awake()
         {
@@ -38,14 +39,18 @@ namespace UnityStandardAssets.Cameras
 
             m_PivotTargetRot = m_Pivot.transform.localRotation;
             m_TransformTargetRot = transform.localRotation;
-            if (!GameApp.Instance.LocalGame)
+            if (CheckGameApp)
             {
-                CanControl(false);
+                if (!GameApp.Instance.LocalGame)
+                {
+                    CanControl(false);
+                }
+                else
+                {
+                    CanControl(true);
+                }
             }
-            else
-            {
-                CanControl(true);
-            }
+       
             GameEventMgr.Instance.AddEventListener<bool>(StringId.StringToHash("CanControl"), CanControl);
         }
 

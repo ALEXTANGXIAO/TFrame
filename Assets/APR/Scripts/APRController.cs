@@ -3,24 +3,32 @@ using UnityEngine;
 
 public class APRController : MonoBehaviour
 {
-    
-    //-------------------------------------------------------------
-    //--Variables
-    //-------------------------------------------------------------
-    
-
-    //Active Ragdoll Player parts
 	public GameObject
-	//
-	Root, Body, Head,
-	UpperRightArm, LowerRightArm,
-	UpperLeftArm, LowerLeftArm, 
-	UpperRightLeg, LowerRightLeg,
-	UpperLeftLeg, LowerLeftLeg,
-	RightFoot, LeftFoot;
-	
+        Root, Body, Head,
+	    UpperRightArm, LowerRightArm,
+	    UpperLeftArm, LowerLeftArm, 
+	    UpperRightLeg, LowerRightLeg,
+	    UpperLeftLeg, LowerLeftLeg,
+	    RightFoot, LeftFoot;
+
+    private ConfigurableJoint
+        cfj_Root, cfj_Body, cfj_Head,
+        cfj_UpperRightArm, cfj_LowerRightArm,
+        cfj_UpperLeftArm, cfj_LowerLeftArm,
+        cfj_UpperRightLeg, cfj_LowerRightLeg,
+        cfj_UpperLeftLeg, cfj_LowerLeftLeg,
+        cfj_RightFoot, cfj_LeftFoot;
+
+    private Rigidbody
+        rgbd_Root, rgbd_Body, rgbd_Head,
+        rgbd_UpperRightArm, rgbd_LowerRightArm,
+        rgbd_UpperLeftArm, rgbd_LowerLeftArm,
+        rgbd_UpperRightLeg, rgbd_LowerRightLeg,
+        rgbd_UpperLeftLeg, rgbd_LowerLeftLeg,
+        rgbd_RightFoot, rgbd_LeftFoot;
+
     //Rigidbody Hands
-	public Rigidbody RightHand, LeftHand;
+    public Rigidbody RightHand, LeftHand;
     
     //Center of mass point
 	public Transform COMP;
@@ -274,25 +282,56 @@ public class APRController : MonoBehaviour
 			//12
 			LeftFoot
 		};
-		
-		//Setup original pose for joint drives
-        BodyTarget = APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation;
-		HeadTarget = APR_Parts[2].GetComponent<ConfigurableJoint>().targetRotation;
-		UpperRightArmTarget = APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation;
-        LowerRightArmTarget = APR_Parts[4].GetComponent<ConfigurableJoint>().targetRotation;
-        UpperLeftArmTarget = APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation;
-        LowerLeftArmTarget = APR_Parts[6].GetComponent<ConfigurableJoint>().targetRotation;
-		UpperRightLegTarget = APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation;
-        LowerRightLegTarget = APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation;
-        UpperLeftLegTarget = APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation;
-        LowerLeftLegTarget = APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation;
-    }  
-    
-    
-    
+        InitCache();
+        //Setup original pose for joint drives
+        BodyTarget = cfj_Body.targetRotation;
+		HeadTarget = cfj_Head.targetRotation;
+		UpperRightArmTarget = cfj_UpperRightArm.targetRotation;
+        LowerRightArmTarget = cfj_LowerRightArm.targetRotation;
+        UpperLeftArmTarget = cfj_UpperLeftArm.targetRotation;
+        LowerLeftArmTarget = cfj_LowerLeftArm.targetRotation;
+		UpperRightLegTarget = cfj_UpperRightLeg.targetRotation;
+        LowerRightLegTarget = cfj_LowerRightLeg.targetRotation;
+        UpperLeftLegTarget = cfj_UpperLeftLeg.targetRotation;
+        LowerLeftLegTarget = cfj_LowerLeftLeg.targetRotation;
+    }
+
+    void InitCache()
+    {
+        cfj_Root = APR_Parts[0].GetComponent<ConfigurableJoint>();
+        cfj_Body = APR_Parts[1].GetComponent<ConfigurableJoint>();
+        cfj_Head = APR_Parts[2].GetComponent<ConfigurableJoint>();
+        cfj_UpperRightArm = APR_Parts[3].GetComponent<ConfigurableJoint>();
+        cfj_LowerRightArm = APR_Parts[4].GetComponent<ConfigurableJoint>();
+        cfj_UpperLeftArm = APR_Parts[5].GetComponent<ConfigurableJoint>();
+        cfj_LowerLeftArm = APR_Parts[6].GetComponent<ConfigurableJoint>();
+        cfj_UpperRightLeg = APR_Parts[7].GetComponent<ConfigurableJoint>();
+        cfj_LowerRightLeg = APR_Parts[8].GetComponent<ConfigurableJoint>();
+        cfj_UpperLeftLeg = APR_Parts[9].GetComponent<ConfigurableJoint>();
+        cfj_LowerLeftLeg = APR_Parts[10].GetComponent<ConfigurableJoint>();
+        cfj_RightFoot = APR_Parts[11].GetComponent<ConfigurableJoint>();
+        cfj_LeftFoot = APR_Parts[12].GetComponent<ConfigurableJoint>();
+
+        rgbd_Root = APR_Parts[0].GetComponent<Rigidbody>();
+        rgbd_Body = APR_Parts[1].GetComponent<Rigidbody>();
+        rgbd_Head = APR_Parts[2].GetComponent<Rigidbody>();
+        rgbd_UpperRightArm = APR_Parts[3].GetComponent<Rigidbody>();
+        rgbd_LowerRightArm = APR_Parts[4].GetComponent<Rigidbody>();
+        rgbd_UpperLeftArm = APR_Parts[5].GetComponent<Rigidbody>();
+        rgbd_LowerLeftArm = APR_Parts[6].GetComponent<Rigidbody>();
+        rgbd_UpperRightLeg = APR_Parts[7].GetComponent<Rigidbody>();
+        rgbd_LowerRightLeg = APR_Parts[8].GetComponent<Rigidbody>();
+        rgbd_UpperLeftLeg = APR_Parts[9].GetComponent<Rigidbody>();
+        rgbd_LowerLeftLeg = APR_Parts[10].GetComponent<Rigidbody>();
+        rgbd_RightFoot = APR_Parts[11].GetComponent<Rigidbody>();
+        rgbd_LeftFoot = APR_Parts[12].GetComponent<Rigidbody>();
+    }
+
+
+
     //---Ground Check---//
     /////////////////////
-	void GroundCheck()
+    void GroundCheck()
 	{
 		Ray ray = new Ray (APR_Parts[0].transform.position, -APR_Parts[0].transform.up);
 		RaycastHit hit;
@@ -300,7 +339,7 @@ public class APRController : MonoBehaviour
 		//Balance when ground is detected
         if (Physics.Raycast(ray, out hit, balanceHeight, 1 << LayerMask.NameToLayer("Ground")) && !inAir && !isJumping && !reachRightAxisUsed && !reachLeftAxisUsed)
         {
-            if(!balanced && APR_Parts[0].GetComponent<Rigidbody>().velocity.magnitude < 1f)
+            if(!balanced && rgbd_Root.velocity.magnitude < 1f)
             {
                 if(autoGetUpWhenPossible)
                 {
@@ -404,7 +443,7 @@ public class APRController : MonoBehaviour
         {
             Direction = APR_Parts[0].transform.rotation * new Vector3(Input.GetAxisRaw(leftRight), 0.0f, Input.GetAxisRaw(forwardBackward));
             Direction.y = 0f;
-            APR_Parts[0].transform.GetComponent<Rigidbody>().velocity = Vector3.Lerp(APR_Parts[0].transform.GetComponent<Rigidbody>().velocity, (Direction * moveSpeed) + new Vector3(0, APR_Parts[0].transform.GetComponent<Rigidbody>().velocity.y, 0), 0.8f);
+            rgbd_Root.velocity = Vector3.Lerp(rgbd_Root.velocity, (Direction * moveSpeed) + new Vector3(0, rgbd_Root.velocity.y, 0), 0.8f);
 
             if(Input.GetAxisRaw(leftRight) != 0 || Input.GetAxisRaw(forwardBackward) != 0 && balanced)
             {
@@ -432,9 +471,9 @@ public class APRController : MonoBehaviour
         {
             if (Input.GetAxisRaw(forwardBackward) != 0)
             {
-                var v3 = APR_Parts[0].GetComponent<Rigidbody>().transform.forward * (Input.GetAxisRaw(forwardBackward) * moveSpeed);
-                v3.y = APR_Parts[0].GetComponent<Rigidbody>().velocity.y;
-                APR_Parts[0].GetComponent<Rigidbody>().velocity = v3;
+                var v3 = rgbd_Root.transform.forward * (Input.GetAxisRaw(forwardBackward) * moveSpeed);
+                v3.y = rgbd_Root.velocity.y;
+                rgbd_Root.velocity = v3;
             }
 
             
@@ -449,18 +488,18 @@ public class APRController : MonoBehaviour
                     
                     if(isRagdoll)
                     {
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                        cfj_UpperRightLeg.angularXDrive = PoseOn;
+                        cfj_UpperRightLeg.angularYZDrive = PoseOn;
+                        cfj_LowerRightLeg.angularXDrive = PoseOn;
+                        cfj_LowerRightLeg.angularYZDrive = PoseOn;
+                        cfj_UpperLeftLeg.angularXDrive = PoseOn;
+                        cfj_UpperLeftLeg.angularYZDrive = PoseOn;
+                        cfj_LowerLeftLeg.angularXDrive = PoseOn;
+                        cfj_LowerLeftLeg.angularYZDrive = PoseOn;
+                        cfj_RightFoot.angularXDrive = PoseOn;
+                        cfj_RightFoot.angularYZDrive = PoseOn;
+                        cfj_LeftFoot.angularXDrive = PoseOn;
+                        cfj_LeftFoot.angularYZDrive = PoseOn;
                     }
                 }
             }
@@ -476,18 +515,18 @@ public class APRController : MonoBehaviour
                     
                     if(isRagdoll)
                     {
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                        cfj_UpperRightLeg.angularXDrive = PoseOn;
+                        cfj_UpperRightLeg.angularYZDrive = PoseOn;
+                        cfj_LowerRightLeg.angularXDrive = PoseOn;
+                        cfj_LowerRightLeg.angularYZDrive = PoseOn;
+                        cfj_UpperLeftLeg.angularXDrive = PoseOn;
+                        cfj_UpperLeftLeg.angularYZDrive = PoseOn;
+                        cfj_LowerLeftLeg.angularXDrive = PoseOn;
+                        cfj_LowerLeftLeg.angularYZDrive = PoseOn;
+                        cfj_RightFoot.angularXDrive = PoseOn;
+                        cfj_RightFoot.angularYZDrive = PoseOn;
+                        cfj_LeftFoot.angularXDrive = PoseOn;
+                        cfj_LeftFoot.angularYZDrive = PoseOn;
                     }
                 }
             }
@@ -503,18 +542,18 @@ public class APRController : MonoBehaviour
                     
                     if(isRagdoll)
                     {
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[7].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[8].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[9].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[10].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[11].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                        APR_Parts[12].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+                        cfj_UpperRightLeg.angularXDrive = DriveOff;
+                        cfj_UpperRightLeg.angularYZDrive = DriveOff;
+                        cfj_LowerRightLeg.angularXDrive = DriveOff;
+                        cfj_LowerRightLeg.angularYZDrive = DriveOff;
+                        cfj_UpperLeftLeg.angularXDrive = DriveOff;
+                        cfj_UpperLeftLeg.angularYZDrive = DriveOff;
+                        cfj_LowerLeftLeg.angularXDrive = DriveOff;
+                        cfj_LowerLeftLeg.angularYZDrive = DriveOff;
+                        cfj_RightFoot.angularXDrive = DriveOff;
+                        cfj_RightFoot.angularYZDrive = DriveOff;
+                        cfj_LeftFoot.angularXDrive = DriveOff;
+                        cfj_LeftFoot.angularYZDrive = DriveOff;
                     }
                 }
             }
@@ -527,6 +566,11 @@ public class APRController : MonoBehaviour
     ////////////////////////
     void PlayerRotation()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            forwardIsCameraDirection = !forwardIsCameraDirection;
+        }
+
         if(forwardIsCameraDirection)
         {
             //Camera Direction
@@ -534,7 +578,7 @@ public class APRController : MonoBehaviour
             var lookPos = cam.transform.forward;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Slerp(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation, Quaternion.Inverse(rotation), Time.deltaTime * turnSpeed);
+            cfj_Root.targetRotation = Quaternion.Slerp(cfj_Root.targetRotation, Quaternion.Inverse(rotation), Time.deltaTime * turnSpeed);
         }
         
         else
@@ -543,18 +587,18 @@ public class APRController : MonoBehaviour
             //Turn with keys
             if (Input.GetAxisRaw(leftRight) != 0)
             {
-                APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Lerp(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation, new Quaternion(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.x,APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.y - (Input.GetAxisRaw(leftRight) * turnSpeed), APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.w), 6 * Time.fixedDeltaTime);
+                cfj_Root.targetRotation = Quaternion.Lerp(cfj_Root.targetRotation, new Quaternion(cfj_Root.targetRotation.x,cfj_Root.targetRotation.y - (Input.GetAxisRaw(leftRight) * turnSpeed), cfj_Root.targetRotation.z, cfj_Root.targetRotation.w), 6 * Time.fixedDeltaTime);
             }
             
             //reset turn upon target rotation limit
-            if(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.y < -0.98f)
+            if(cfj_Root.targetRotation.y < -0.98f)
             {
-                APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.x, 0.98f, APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.w);
+                cfj_Root.targetRotation = new Quaternion(cfj_Root.targetRotation.x, 0.98f, cfj_Root.targetRotation.z, cfj_Root.targetRotation.w);
             }
 
-            else if(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.y > 0.98f)
+            else if(cfj_Root.targetRotation.y > 0.98f)
             {
-                APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.x, -0.98f, APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[0].GetComponent<ConfigurableJoint>().targetRotation.w);
+                cfj_Root.targetRotation = new Quaternion(cfj_Root.targetRotation.x, -0.98f, cfj_Root.targetRotation.z, cfj_Root.targetRotation.w);
             }
         }
     }
@@ -593,10 +637,10 @@ public class APRController : MonoBehaviour
         {
             isJumping = true;
                 
-            var v3 = APR_Parts[0].GetComponent<Rigidbody>().transform.up * jumpForce;
-            v3.x = APR_Parts[0].GetComponent<Rigidbody>().velocity.x;
-            v3.z = APR_Parts[0].GetComponent<Rigidbody>().velocity.z;
-            APR_Parts[0].GetComponent<Rigidbody>().velocity = v3;
+            var v3 = rgbd_Root.transform.up * jumpForce;
+            v3.x = rgbd_Root.velocity.x;
+            v3.z = rgbd_Root.velocity.z;
+            rgbd_Root.velocity = v3;
         }
 
 		if (isJumping)
@@ -651,7 +695,7 @@ public class APRController : MonoBehaviour
                 MouseYAxisBody = -0.9f;
             }
             
-            APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(MouseYAxisBody, 0, 0, 1);
+            cfj_Body.targetRotation = new Quaternion(MouseYAxisBody, 0, 0, 1);
         }  
             
             
@@ -662,14 +706,14 @@ public class APRController : MonoBehaviour
             if(!reachLeftAxisUsed)
             {
                 //Adjust Left Arm joint strength
-                APR_Parts[5].GetComponent<ConfigurableJoint>().angularXDrive = ReachStiffness;
-                APR_Parts[5].GetComponent<ConfigurableJoint>().angularYZDrive = ReachStiffness;
-                APR_Parts[6].GetComponent<ConfigurableJoint>().angularXDrive = ReachStiffness;
-                APR_Parts[6].GetComponent<ConfigurableJoint>().angularYZDrive = ReachStiffness;
+                cfj_UpperLeftArm.angularXDrive = ReachStiffness;
+                cfj_UpperLeftArm.angularYZDrive = ReachStiffness;
+                cfj_LowerLeftArm.angularXDrive = ReachStiffness;
+                cfj_LowerLeftArm.angularYZDrive = ReachStiffness;
                     
                 //Adjust body joint strength
-                APR_Parts[1].GetComponent<ConfigurableJoint>().angularXDrive = CoreStiffness;
-                APR_Parts[1].GetComponent<ConfigurableJoint>().angularYZDrive = CoreStiffness;
+                cfj_Body.angularXDrive = CoreStiffness;
+                cfj_Body.angularYZDrive = CoreStiffness;
                 
                 reachLeftAxisUsed = true;
             }
@@ -690,7 +734,7 @@ public class APRController : MonoBehaviour
             }
             
             //upper  left arm pose
-			 APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.58f - (MouseYAxisArms), -0.88f - (MouseYAxisArms), -0.8f, 1);
+			 cfj_UpperLeftArm.targetRotation = new Quaternion( -0.58f - (MouseYAxisArms), -0.88f - (MouseYAxisArms), -0.8f, 1);
         }
         
         if(Input.GetAxisRaw(reachLeft) == 0 && !punchingLeft)
@@ -699,21 +743,21 @@ public class APRController : MonoBehaviour
             {
                 if(balanced)
                 {
-                    APR_Parts[5].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[5].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                    APR_Parts[6].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[6].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                    cfj_UpperLeftArm.angularXDrive = PoseOn;
+                    cfj_UpperLeftArm.angularYZDrive = PoseOn;
+                    cfj_LowerLeftArm.angularXDrive = PoseOn;
+                    cfj_LowerLeftArm.angularYZDrive = PoseOn;
                 
-                    APR_Parts[1].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[1].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                    cfj_Body.angularXDrive = PoseOn;
+                    cfj_Body.angularYZDrive = PoseOn;
                 }
                 
                 else if(!balanced)
                 {
-                    APR_Parts[5].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                    APR_Parts[5].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                    APR_Parts[6].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                    APR_Parts[6].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+                    cfj_UpperLeftArm.angularXDrive = DriveOff;
+                    cfj_UpperLeftArm.angularYZDrive = DriveOff;
+                    cfj_LowerLeftArm.angularXDrive = DriveOff;
+                    cfj_LowerLeftArm.angularYZDrive = DriveOff;
                 }
                 
                 ResetPose = true;
@@ -731,14 +775,14 @@ public class APRController : MonoBehaviour
             if(!reachRightAxisUsed)
             {
                 //Adjust Right Arm joint strength
-                APR_Parts[3].GetComponent<ConfigurableJoint>().angularXDrive = ReachStiffness;
-                APR_Parts[3].GetComponent<ConfigurableJoint>().angularYZDrive = ReachStiffness;
-                APR_Parts[4].GetComponent<ConfigurableJoint>().angularXDrive = ReachStiffness;
-                APR_Parts[4].GetComponent<ConfigurableJoint>().angularYZDrive = ReachStiffness;
+                cfj_UpperRightArm.angularXDrive = ReachStiffness;
+                cfj_UpperRightArm.angularYZDrive = ReachStiffness;
+                cfj_LowerRightArm.angularXDrive = ReachStiffness;
+                cfj_LowerRightArm.angularYZDrive = ReachStiffness;
                     
                 //Adjust body joint strength
-                APR_Parts[1].GetComponent<ConfigurableJoint>().angularXDrive = CoreStiffness;
-                APR_Parts[1].GetComponent<ConfigurableJoint>().angularYZDrive = CoreStiffness;
+                cfj_Body.angularXDrive = CoreStiffness;
+                cfj_Body.angularYZDrive = CoreStiffness;
                 
                 reachRightAxisUsed = true;
             }
@@ -759,7 +803,7 @@ public class APRController : MonoBehaviour
             }
             
             //upper right arm pose
-            APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( 0.58f + (MouseYAxisArms), -0.88f - (MouseYAxisArms), 0.8f, 1);
+            cfj_UpperRightArm.targetRotation = new Quaternion( 0.58f + (MouseYAxisArms), -0.88f - (MouseYAxisArms), 0.8f, 1);
         }
         
         if(Input.GetAxisRaw(reachRight) == 0 && !punchingRight)
@@ -768,21 +812,21 @@ public class APRController : MonoBehaviour
             {
                 if(balanced)
                 {
-                    APR_Parts[3].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[3].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-                    APR_Parts[4].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[4].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                    cfj_UpperRightArm.angularXDrive = PoseOn;
+                    cfj_UpperRightArm.angularYZDrive = PoseOn;
+                    cfj_LowerRightArm.angularXDrive = PoseOn;
+                    cfj_LowerRightArm.angularYZDrive = PoseOn;
                 
-                    APR_Parts[1].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-                    APR_Parts[1].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+                    cfj_Body.angularXDrive = PoseOn;
+                    cfj_Body.angularYZDrive = PoseOn;
                 }
                 
                 else if(!balanced)
                 {
-                    APR_Parts[3].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                    APR_Parts[3].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-                    APR_Parts[4].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-                    APR_Parts[4].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+                    cfj_UpperRightArm.angularXDrive = DriveOff;
+                    cfj_UpperRightArm.angularYZDrive = DriveOff;
+                    cfj_LowerRightArm.angularXDrive = DriveOff;
+                    cfj_LowerRightArm.angularYZDrive = DriveOff;
                 }
                 
                 ResetPose = true;
@@ -805,9 +849,9 @@ public class APRController : MonoBehaviour
             punchingRight= true;
             
             //Right hand punch pull back pose
-            APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.15f, -0.15f, 0, 1);
-            APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.62f, -0.51f, 0.02f, 1);
-            APR_Parts[4].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( 1.31f, 0.5f, -0.5f, 1);
+            cfj_Body.targetRotation = new Quaternion( -0.15f, -0.15f, 0, 1);
+            cfj_UpperRightArm.targetRotation = new Quaternion( -0.62f, -0.51f, 0.02f, 1);
+            cfj_LowerRightArm.targetRotation = new Quaternion( 1.31f, 0.5f, -0.5f, 1);
 		}
         
         if(punchingRight && !Input.GetKey(punchRight))
@@ -815,14 +859,14 @@ public class APRController : MonoBehaviour
             punchingRight = false;
             
             //Right hand punch release pose
-			APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.15f, 0.15f, 0, 1);
-			APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( 0.74f, 0.04f, 0f, 1);
-			APR_Parts[4].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( 0.2f, 0, 0, 1);
+			cfj_Body.targetRotation = new Quaternion( -0.15f, 0.15f, 0, 1);
+			cfj_UpperRightArm.targetRotation = new Quaternion( 0.74f, 0.04f, 0f, 1);
+			cfj_LowerRightArm.targetRotation = new Quaternion( 0.2f, 0, 0, 1);
             
             //Right hand punch force
 			RightHand.AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
  
-			APR_Parts[1].GetComponent<Rigidbody>().AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
+			rgbd_Body.AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
 			
             StartCoroutine(DelayCoroutine());
 			IEnumerator DelayCoroutine()
@@ -830,8 +874,8 @@ public class APRController : MonoBehaviour
                 yield return new WaitForSeconds(0.3f);
                 if(!Input.GetKey(punchRight))
                 {
-                    APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation = UpperRightArmTarget;
-                    APR_Parts[4].GetComponent<ConfigurableJoint>().targetRotation = LowerRightArmTarget;
+                    cfj_UpperRightArm.targetRotation = UpperRightArmTarget;
+                    cfj_LowerRightArm.targetRotation = LowerRightArmTarget;
                 }
             }
         }
@@ -843,9 +887,9 @@ public class APRController : MonoBehaviour
             punchingLeft = true;
             
             //Left hand punch pull back pose
-            APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.15f, 0.15f, 0, 1);
-            APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( 0.62f, -0.51f, 0.02f, 1);
-            APR_Parts[6].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -1.31f, 0.5f, 0.5f, 1);
+            cfj_Body.targetRotation = new Quaternion( -0.15f, 0.15f, 0, 1);
+            cfj_UpperLeftArm.targetRotation = new Quaternion( 0.62f, -0.51f, 0.02f, 1);
+            cfj_LowerLeftArm.targetRotation = new Quaternion( -1.31f, 0.5f, 0.5f, 1);
         }
         
         if(punchingLeft && !Input.GetKey(punchLeft))
@@ -853,14 +897,14 @@ public class APRController : MonoBehaviour
             punchingLeft = false;
             
             //Left hand punch release pose
-            APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.15f, -0.15f, 0, 1);
-            APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.74f, 0.04f, 0f, 1);
-            APR_Parts[6].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion( -0.2f, 0, 0, 1);
+            cfj_Body.targetRotation = new Quaternion( -0.15f, -0.15f, 0, 1);
+            cfj_UpperLeftArm.targetRotation = new Quaternion( -0.74f, 0.04f, 0f, 1);
+            cfj_LowerLeftArm.targetRotation = new Quaternion( -0.2f, 0, 0, 1);
             
             //Left hand punch force
             LeftHand.AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
  
-            APR_Parts[1].GetComponent<Rigidbody>().AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
+            rgbd_Body.AddForce(APR_Parts[0].transform.forward * punchForce, ForceMode.Impulse);
 			
             StartCoroutine(DelayCoroutine());
 			IEnumerator DelayCoroutine()
@@ -868,8 +912,8 @@ public class APRController : MonoBehaviour
                 yield return new WaitForSeconds(0.3f);
                 if(!Input.GetKey(punchLeft))
                 {
-                    APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation = UpperLeftArmTarget;
-                    APR_Parts[6].GetComponent<ConfigurableJoint>().targetRotation = LowerLeftArmTarget;
+                    cfj_UpperLeftArm.targetRotation = UpperLeftArmTarget;
+                    cfj_LowerLeftArm.targetRotation = LowerLeftArmTarget;
                 }
             }
         }
@@ -927,23 +971,23 @@ public class APRController : MonoBehaviour
 				Step_R_timer += Time.fixedDeltaTime;
 			 
                 //Right foot force down
-				APR_Parts[11].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
 			
 				//walk simulation
 				if (WalkForward)
 				{                
-					APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.x + 0.09f * StepHeight, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.w);
-					APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.x - 0.09f * StepHeight * 2, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperRightLeg.targetRotation = new Quaternion(cfj_UpperRightLeg.targetRotation.x + 0.09f * StepHeight, cfj_UpperRightLeg.targetRotation.y, cfj_UpperRightLeg.targetRotation.z, cfj_UpperRightLeg.targetRotation.w);
+					cfj_LowerRightLeg.targetRotation = new Quaternion(cfj_LowerRightLeg.targetRotation.x - 0.09f * StepHeight * 2, cfj_LowerRightLeg.targetRotation.y, cfj_LowerRightLeg.targetRotation.z, cfj_LowerRightLeg.targetRotation.w);
 
-					APR_Parts[9].GetComponent<ConfigurableJoint>().GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.x - 0.12f * StepHeight / 2, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperLeftLeg.targetRotation = new Quaternion(cfj_UpperLeftLeg.targetRotation.x - 0.12f * StepHeight / 2, cfj_UpperLeftLeg.targetRotation.y, cfj_UpperLeftLeg.targetRotation.z, cfj_UpperLeftLeg.targetRotation.w);
 				}
                 
                 if (WalkBackward)
 				{
-					APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.x - 0.00f * StepHeight, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.w);
-					APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.x - 0.07f * StepHeight * 2, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperRightLeg.targetRotation = new Quaternion(cfj_UpperRightLeg.targetRotation.x - 0.00f * StepHeight, cfj_UpperRightLeg.targetRotation.y, cfj_UpperRightLeg.targetRotation.z, cfj_UpperRightLeg.targetRotation.w);
+					cfj_LowerRightLeg.targetRotation = new Quaternion(cfj_LowerRightLeg.targetRotation.x - 0.07f * StepHeight * 2, cfj_LowerRightLeg.targetRotation.y, cfj_LowerRightLeg.targetRotation.z, cfj_LowerRightLeg.targetRotation.w);
 
-					APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.x + 0.02f * StepHeight / 2, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperLeftLeg.targetRotation = new Quaternion(cfj_UpperLeftLeg.targetRotation.x + 0.02f * StepHeight / 2, cfj_UpperLeftLeg.targetRotation.y, cfj_UpperLeftLeg.targetRotation.z, cfj_UpperLeftLeg.targetRotation.w);
 				}
                 
                 
@@ -962,12 +1006,12 @@ public class APRController : MonoBehaviour
 			else
 			{
 				//reset to idle
-				APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Lerp(APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation, UpperRightLegTarget, (8f) * Time.fixedDeltaTime);
-				APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Lerp(APR_Parts[8].GetComponent<ConfigurableJoint>().targetRotation, LowerRightLegTarget, (17f) * Time.fixedDeltaTime);
+				cfj_UpperRightLeg.targetRotation = Quaternion.Lerp(cfj_UpperRightLeg.targetRotation, UpperRightLegTarget, (8f) * Time.fixedDeltaTime);
+				cfj_LowerRightLeg.targetRotation = Quaternion.Lerp(cfj_LowerRightLeg.targetRotation, LowerRightLegTarget, (17f) * Time.fixedDeltaTime);
 				
                 //feet force down
-				APR_Parts[11].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
-				APR_Parts[12].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
 			}
             
             
@@ -977,23 +1021,23 @@ public class APRController : MonoBehaviour
 				Step_L_timer += Time.fixedDeltaTime;
 			     
                 //Left foot force down
-				APR_Parts[12].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
                 
                 //walk simulation
 				if (WalkForward)
 				{
-					APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.x + 0.09f * StepHeight, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.w);
-					APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.x - 0.09f * StepHeight * 2, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperLeftLeg.targetRotation = new Quaternion(cfj_UpperLeftLeg.targetRotation.x + 0.09f * StepHeight, cfj_UpperLeftLeg.targetRotation.y, cfj_UpperLeftLeg.targetRotation.z, cfj_UpperLeftLeg.targetRotation.w);
+					cfj_LowerLeftLeg.targetRotation = new Quaternion(cfj_LowerLeftLeg.targetRotation.x - 0.09f * StepHeight * 2, cfj_LowerLeftLeg.targetRotation.y, cfj_LowerLeftLeg.targetRotation.z, cfj_LowerLeftLeg.targetRotation.w);
 
-					APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.x - 0.12f * StepHeight / 2, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperRightLeg.targetRotation = new Quaternion(cfj_UpperRightLeg.targetRotation.x - 0.12f * StepHeight / 2, cfj_UpperRightLeg.targetRotation.y, cfj_UpperRightLeg.targetRotation.z, cfj_UpperRightLeg.targetRotation.w);
 				}
                 
                 if (WalkBackward)
 				{
-					APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.x - 0.00f * StepHeight, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation.w);
-					APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.x - 0.07f * StepHeight * 2, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperLeftLeg.targetRotation = new Quaternion(cfj_UpperLeftLeg.targetRotation.x - 0.00f * StepHeight, cfj_UpperLeftLeg.targetRotation.y, cfj_UpperLeftLeg.targetRotation.z, cfj_UpperLeftLeg.targetRotation.w);
+					cfj_LowerLeftLeg.targetRotation = new Quaternion(cfj_LowerLeftLeg.targetRotation.x - 0.07f * StepHeight * 2, cfj_LowerLeftLeg.targetRotation.y, cfj_LowerLeftLeg.targetRotation.z, cfj_LowerLeftLeg.targetRotation.w);
 
-					APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation = new Quaternion(APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.x + 0.02f * StepHeight / 2, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.y, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.z, APR_Parts[7].GetComponent<ConfigurableJoint>().targetRotation.w);
+					cfj_UpperRightLeg.targetRotation = new Quaternion(cfj_UpperRightLeg.targetRotation.x + 0.02f * StepHeight / 2, cfj_UpperRightLeg.targetRotation.y, cfj_UpperRightLeg.targetRotation.z, cfj_UpperRightLeg.targetRotation.w);
 				}
 			
 			
@@ -1012,12 +1056,12 @@ public class APRController : MonoBehaviour
 			else
 			{
 				//reset to idle
-				APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Lerp(APR_Parts[9].GetComponent<ConfigurableJoint>().targetRotation, UpperLeftLegTarget, (7f) * Time.fixedDeltaTime);
-				APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Lerp(APR_Parts[10].GetComponent<ConfigurableJoint>().targetRotation, LowerLeftLegTarget, (18f) * Time.fixedDeltaTime);
+				cfj_UpperLeftLeg.targetRotation = Quaternion.Lerp(cfj_UpperLeftLeg.targetRotation, UpperLeftLegTarget, (7f) * Time.fixedDeltaTime);
+				cfj_LowerLeftLeg.targetRotation = Quaternion.Lerp(cfj_LowerLeftLeg.targetRotation, LowerLeftLegTarget, (18f) * Time.fixedDeltaTime);
 				
                 //feet force down
-				APR_Parts[11].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
-				APR_Parts[12].GetComponent<Rigidbody>().AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
 			}
 		}
 	}
@@ -1032,40 +1076,40 @@ public class APRController : MonoBehaviour
 		balanced = false;
 		
 		//Root
-		APR_Parts[0].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[0].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+		cfj_Root.angularXDrive = DriveOff;
+		cfj_Root.angularYZDrive = DriveOff;
 		//head
-		APR_Parts[2].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[2].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+		cfj_Head.angularXDrive = DriveOff;
+		cfj_Head.angularYZDrive = DriveOff;
 		//arms
         if(!reachRightAxisUsed)
         {
-            APR_Parts[3].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-            APR_Parts[3].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-            APR_Parts[4].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-            APR_Parts[4].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+            cfj_UpperRightArm.angularXDrive = DriveOff;
+            cfj_UpperRightArm.angularYZDrive = DriveOff;
+            cfj_LowerRightArm.angularXDrive = DriveOff;
+            cfj_LowerRightArm.angularYZDrive = DriveOff;
         }
         
         if(!reachLeftAxisUsed)
         {
-            APR_Parts[5].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-            APR_Parts[5].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-            APR_Parts[6].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-            APR_Parts[6].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+            cfj_UpperLeftArm.angularXDrive = DriveOff;
+            cfj_UpperLeftArm.angularYZDrive = DriveOff;
+            cfj_LowerLeftArm.angularXDrive = DriveOff;
+            cfj_LowerLeftArm.angularYZDrive = DriveOff;
         }
 		//legs
-		APR_Parts[7].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[7].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-		APR_Parts[8].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[8].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-		APR_Parts[9].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[9].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-		APR_Parts[10].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[10].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-		APR_Parts[11].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[11].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
-		APR_Parts[12].GetComponent<ConfigurableJoint>().angularXDrive = DriveOff;
-		APR_Parts[12].GetComponent<ConfigurableJoint>().angularYZDrive = DriveOff;
+		cfj_UpperRightLeg.angularXDrive = DriveOff;
+		cfj_UpperRightLeg.angularYZDrive = DriveOff;
+		cfj_LowerRightLeg.angularXDrive = DriveOff;
+		cfj_LowerRightLeg.angularYZDrive = DriveOff;
+		cfj_UpperLeftLeg.angularXDrive = DriveOff;
+		cfj_UpperLeftLeg.angularYZDrive = DriveOff;
+		cfj_LowerLeftLeg.angularXDrive = DriveOff;
+		cfj_LowerLeftLeg.angularYZDrive = DriveOff;
+		cfj_RightFoot.angularXDrive = DriveOff;
+		cfj_RightFoot.angularYZDrive = DriveOff;
+		cfj_LeftFoot.angularXDrive = DriveOff;
+		cfj_LeftFoot.angularYZDrive = DriveOff;
 	}
 	
     
@@ -1079,40 +1123,40 @@ public class APRController : MonoBehaviour
 		balanced = true;
 		
 		//Root
-		APR_Parts[0].GetComponent<ConfigurableJoint>().angularXDrive = BalanceOn;
-		APR_Parts[0].GetComponent<ConfigurableJoint>().angularYZDrive = BalanceOn;
+		cfj_Root.angularXDrive = BalanceOn;
+		cfj_Root.angularYZDrive = BalanceOn;
 		//head
-		APR_Parts[2].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[2].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+		cfj_Head.angularXDrive = PoseOn;
+		cfj_Head.angularYZDrive = PoseOn;
 		//arms
 		if(!reachRightAxisUsed)
         {
-            APR_Parts[3].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-            APR_Parts[3].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-            APR_Parts[4].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-            APR_Parts[4].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+            cfj_UpperRightArm.angularXDrive = PoseOn;
+            cfj_UpperRightArm.angularYZDrive = PoseOn;
+            cfj_LowerRightArm.angularXDrive = PoseOn;
+            cfj_LowerRightArm.angularYZDrive = PoseOn;
         }
         
         if(!reachLeftAxisUsed)
         {
-            APR_Parts[5].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-            APR_Parts[5].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-            APR_Parts[6].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-            APR_Parts[6].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+            cfj_UpperLeftArm.angularXDrive = PoseOn;
+            cfj_UpperLeftArm.angularYZDrive = PoseOn;
+            cfj_LowerLeftArm.angularXDrive = PoseOn;
+            cfj_LowerLeftArm.angularYZDrive = PoseOn;
         }
 		//legs
-		APR_Parts[7].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[7].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-		APR_Parts[8].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[8].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-		APR_Parts[9].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[9].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-		APR_Parts[10].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[10].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-		APR_Parts[11].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[11].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
-		APR_Parts[12].GetComponent<ConfigurableJoint>().angularXDrive = PoseOn;
-		APR_Parts[12].GetComponent<ConfigurableJoint>().angularYZDrive = PoseOn;
+		cfj_UpperRightLeg.angularXDrive = PoseOn;
+		cfj_UpperRightLeg.angularYZDrive = PoseOn;
+		cfj_LowerRightLeg.angularXDrive = PoseOn;
+		cfj_LowerRightLeg.angularYZDrive = PoseOn;
+		cfj_UpperLeftLeg.angularXDrive = PoseOn;
+		cfj_UpperLeftLeg.angularYZDrive = PoseOn;
+		cfj_LowerLeftLeg.angularXDrive = PoseOn;
+		cfj_LowerLeftLeg.angularYZDrive = PoseOn;
+		cfj_RightFoot.angularXDrive = PoseOn;
+		cfj_RightFoot.angularYZDrive = PoseOn;
+		cfj_LeftFoot.angularXDrive = PoseOn;
+		cfj_LeftFoot.angularYZDrive = PoseOn;
         
         ResetPose = true;
 	}
@@ -1125,11 +1169,11 @@ public class APRController : MonoBehaviour
     {
         if(ResetPose && !jumping)
         {
-            APR_Parts[1].GetComponent<ConfigurableJoint>().targetRotation = BodyTarget;
-            APR_Parts[3].GetComponent<ConfigurableJoint>().targetRotation = UpperRightArmTarget;
-			APR_Parts[4].GetComponent<ConfigurableJoint>().targetRotation = LowerRightArmTarget;
-            APR_Parts[5].GetComponent<ConfigurableJoint>().targetRotation = UpperLeftArmTarget;
-			APR_Parts[6].GetComponent<ConfigurableJoint>().targetRotation = LowerLeftArmTarget;
+            cfj_Body.targetRotation = BodyTarget;
+            cfj_UpperRightArm.targetRotation = UpperRightArmTarget;
+			cfj_LowerRightArm.targetRotation = LowerRightArmTarget;
+            cfj_UpperLeftArm.targetRotation = UpperLeftArmTarget;
+			cfj_LowerLeftArm.targetRotation = LowerLeftArmTarget;
             
             MouseYAxisArms = 0;
             
@@ -1145,29 +1189,29 @@ public class APRController : MonoBehaviour
 	{
 			CenterOfMassPoint =
 			
-			(APR_Parts[0].GetComponent<Rigidbody>().mass * APR_Parts[0].transform.position + 
-            APR_Parts[1].GetComponent<Rigidbody>().mass * APR_Parts[1].transform.position +
-            APR_Parts[2].GetComponent<Rigidbody>().mass * APR_Parts[2].transform.position +
-            APR_Parts[3].GetComponent<Rigidbody>().mass * APR_Parts[3].transform.position +
-            APR_Parts[4].GetComponent<Rigidbody>().mass * APR_Parts[4].transform.position +
-            APR_Parts[5].GetComponent<Rigidbody>().mass * APR_Parts[5].transform.position +
-            APR_Parts[6].GetComponent<Rigidbody>().mass * APR_Parts[6].transform.position +
-			APR_Parts[7].GetComponent<Rigidbody>().mass * APR_Parts[7].transform.position +
-			APR_Parts[8].GetComponent<Rigidbody>().mass * APR_Parts[8].transform.position +
-			APR_Parts[9].GetComponent<Rigidbody>().mass * APR_Parts[9].transform.position +
-			APR_Parts[10].GetComponent<Rigidbody>().mass * APR_Parts[10].transform.position +
-			APR_Parts[11].GetComponent<Rigidbody>().mass * APR_Parts[11].transform.position +
-			APR_Parts[12].GetComponent<Rigidbody>().mass * APR_Parts[12].transform.position) 
+			(rgbd_Root.mass * APR_Parts[0].transform.position + 
+            rgbd_Body.mass * APR_Parts[1].transform.position +
+            rgbd_Head.mass * APR_Parts[2].transform.position +
+           rgbd_UpperRightArm.mass * APR_Parts[3].transform.position +
+           rgbd_LowerRightArm.mass * APR_Parts[4].transform.position +
+            rgbd_UpperLeftArm.mass * APR_Parts[5].transform.position +
+            rgbd_LowerLeftArm.mass * APR_Parts[6].transform.position +
+			rgbd_UpperRightLeg.mass * APR_Parts[7].transform.position +
+			rgbd_LowerRightLeg.mass * APR_Parts[8].transform.position +
+			rgbd_UpperLeftLeg.mass * APR_Parts[9].transform.position +
+			rgbd_LowerLeftLeg.mass * APR_Parts[10].transform.position +
+			rgbd_RightFoot.mass * APR_Parts[11].transform.position +
+			rgbd_LeftFoot.mass * APR_Parts[12].transform.position) 
             
             /
 			
-            (APR_Parts[0].GetComponent<Rigidbody>().mass + APR_Parts[1].GetComponent<Rigidbody>().mass +
-            APR_Parts[2].GetComponent<Rigidbody>().mass + APR_Parts[3].GetComponent<Rigidbody>().mass +
-            APR_Parts[4].GetComponent<Rigidbody>().mass + APR_Parts[5].GetComponent<Rigidbody>().mass +
-            APR_Parts[6].GetComponent<Rigidbody>().mass + APR_Parts[7].GetComponent<Rigidbody>().mass +
-			APR_Parts[8].GetComponent<Rigidbody>().mass + APR_Parts[9].GetComponent<Rigidbody>().mass +
-			APR_Parts[10].GetComponent<Rigidbody>().mass + APR_Parts[11].GetComponent<Rigidbody>().mass +
-			APR_Parts[12].GetComponent<Rigidbody>().mass);
+            (rgbd_Root.mass + rgbd_Body.mass +
+            rgbd_Head.mass +rgbd_UpperRightArm.mass +
+           rgbd_LowerRightArm.mass + rgbd_UpperLeftArm.mass +
+            rgbd_LowerLeftArm.mass + rgbd_UpperRightLeg.mass +
+			rgbd_LowerRightLeg.mass + rgbd_UpperLeftLeg.mass +
+			rgbd_LowerLeftLeg.mass + rgbd_RightFoot.mass +
+			rgbd_LeftFoot.mass);
 			
 			COMP.position = CenterOfMassPoint;
 	}
