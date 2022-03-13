@@ -54,6 +54,8 @@ public class APRController : MonoBehaviour
     //Player KeyCode controls
     public string punchLeft = "q";
     public string punchRight = "e";
+
+    public bool CtrlHead = false;
     
     [Header("The Layer Only This Player Is On")]
     //Player layer name
@@ -165,7 +167,7 @@ public class APRController : MonoBehaviour
     {
         if(useControls && !inAir)
         {
-            PlayerMovement();
+            //PlayerMovement();
             
             if(canPunch)
             {
@@ -199,6 +201,11 @@ public class APRController : MonoBehaviour
     //////////////////////
     void FixedUpdate()
     {
+        if (useControls && !inAir)
+        {
+            PlayerMovement();
+        }
+
         Walking();
         
         if(useControls)
@@ -443,7 +450,7 @@ public class APRController : MonoBehaviour
         {
             Direction = APR_Parts[0].transform.rotation * new Vector3(Input.GetAxisRaw(leftRight), 0.0f, Input.GetAxisRaw(forwardBackward));
             Direction.y = 0f;
-            rgbd_Root.velocity = Vector3.Lerp(rgbd_Root.velocity, (Direction * moveSpeed) + new Vector3(0, rgbd_Root.velocity.y, 0), 0.8f);
+            rgbd_Root.velocity = Vector3.Lerp(rgbd_Root.velocity, (Direction * Time.fixedDeltaTime * 70 * moveSpeed) + new Vector3(0, rgbd_Root.velocity.y, 0), 0.8f);
 
             if(Input.GetAxisRaw(leftRight) != 0 || Input.GetAxisRaw(forwardBackward) != 0 && balanced)
             {
@@ -578,7 +585,7 @@ public class APRController : MonoBehaviour
             var lookPos = cam.transform.forward;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            cfj_Root.targetRotation = Quaternion.Slerp(cfj_Root.targetRotation, Quaternion.Inverse(rotation), Time.deltaTime * turnSpeed);
+            cfj_Root.targetRotation = Quaternion.Slerp(cfj_Root.targetRotation, Quaternion.Inverse(rotation), Time.fixedDeltaTime * turnSpeed);
         }
         
         else
@@ -678,7 +685,7 @@ public class APRController : MonoBehaviour
     {
         //Body Bending
         //return;
-        if(1==1)
+        if(CtrlHead)
         {
             if(MouseYAxisBody <= 0.9f && MouseYAxisBody >= -0.9f)
             {
@@ -971,7 +978,7 @@ public class APRController : MonoBehaviour
 				Step_R_timer += Time.fixedDeltaTime;
 			 
                 //Right foot force down
-				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
 			
 				//walk simulation
 				if (WalkForward)
@@ -1010,8 +1017,8 @@ public class APRController : MonoBehaviour
 				cfj_LowerRightLeg.targetRotation = Quaternion.Lerp(cfj_LowerRightLeg.targetRotation, LowerRightLegTarget, (17f) * Time.fixedDeltaTime);
 				
                 //feet force down
-				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
-				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
 			}
             
             
@@ -1021,7 +1028,7 @@ public class APRController : MonoBehaviour
 				Step_L_timer += Time.fixedDeltaTime;
 			     
                 //Left foot force down
-				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
                 
                 //walk simulation
 				if (WalkForward)
@@ -1060,8 +1067,8 @@ public class APRController : MonoBehaviour
 				cfj_LowerLeftLeg.targetRotation = Quaternion.Lerp(cfj_LowerLeftLeg.targetRotation, LowerLeftLegTarget, (18f) * Time.fixedDeltaTime);
 				
                 //feet force down
-				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
-				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.deltaTime, ForceMode.Impulse);
+				rgbd_RightFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
+				rgbd_LeftFoot.AddForce(-Vector3.up * FeetMountForce * Time.fixedDeltaTime, ForceMode.Impulse);
 			}
 		}
 	}

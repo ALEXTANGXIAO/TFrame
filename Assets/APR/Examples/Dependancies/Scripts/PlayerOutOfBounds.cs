@@ -2,19 +2,6 @@
 using UnityEngine;
 
 
-    //-------------------------------------------------------------
-    //--APR Player
-    //--Player Out Of Bounds
-    //
-    //--Unity Asset Store - Version 1.0
-    //
-    //--By The Famous Mouse
-    //
-    //--Twitter @FamousMouse_Dev
-    //--Youtube TheFamouseMouse
-    //-------------------------------------------------------------
-
-
 public class PlayerOutOfBounds : MonoBehaviour
 {
     //Player container
