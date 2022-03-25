@@ -51,13 +51,5 @@ sealed partial class GameApp : UnitySingleton<GameApp>
             UISys.Mgr.ShowWindow<JoyStickUI>();
 #endif
         }
-
-        //StartCoroutine(Test(entity));
-    }
-
-    IEnumerator Test(Entity entity)
-    {
-        yield return new WaitForSeconds(3.0f);
-        ECSObject.Destroy(entity);
     }
 }

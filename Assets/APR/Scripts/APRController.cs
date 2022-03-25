@@ -1,6 +1,24 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+public static class APRBody
+{
+    public static int Root = 0;
+    public static int Body = 1;
+    public static int Head = 2;
+    public static int UpperRightArm = 3;
+    public static int LowerRightArm = 4;
+    public static int UpperLeftArm = 5;
+    public static int LowerLeftArm = 6;
+
+    public static int UpperRightLeg = 7;
+    public static int LowerRightLeg = 8;
+    public static int UpperLeftLeg = 9;
+    public static int LowerLeftLeg = 10;
+    public static int RightFoot = 11;
+    public static int LeftFoot = 12;
+}
+
 public class APRController : MonoBehaviour
 {
 	public GameObject
@@ -1199,8 +1217,8 @@ public class APRController : MonoBehaviour
 			(rgbd_Root.mass * APR_Parts[0].transform.position + 
             rgbd_Body.mass * APR_Parts[1].transform.position +
             rgbd_Head.mass * APR_Parts[2].transform.position +
-           rgbd_UpperRightArm.mass * APR_Parts[3].transform.position +
-           rgbd_LowerRightArm.mass * APR_Parts[4].transform.position +
+            rgbd_UpperRightArm.mass * APR_Parts[3].transform.position +
+            rgbd_LowerRightArm.mass * APR_Parts[4].transform.position +
             rgbd_UpperLeftArm.mass * APR_Parts[5].transform.position +
             rgbd_LowerLeftArm.mass * APR_Parts[6].transform.position +
 			rgbd_UpperRightLeg.mass * APR_Parts[7].transform.position +
@@ -1214,7 +1232,7 @@ public class APRController : MonoBehaviour
 			
             (rgbd_Root.mass + rgbd_Body.mass +
             rgbd_Head.mass +rgbd_UpperRightArm.mass +
-           rgbd_LowerRightArm.mass + rgbd_UpperLeftArm.mass +
+            rgbd_LowerRightArm.mass + rgbd_UpperLeftArm.mass +
             rgbd_LowerLeftArm.mass + rgbd_UpperRightLeg.mass +
 			rgbd_LowerRightLeg.mass + rgbd_UpperLeftLeg.mass +
 			rgbd_LowerLeftLeg.mass + rgbd_RightFoot.mass +
@@ -1222,29 +1240,24 @@ public class APRController : MonoBehaviour
 			
 			COMP.position = CenterOfMassPoint;
 	}
-    
-    
-    
-    //-------------------------------------------------------------
-    //--Debug
-    //-------------------------------------------------------------
-    
-	
-    
-	//---Editor Debug Mode---//
-	//////////////////////////
-	void OnDrawGizmos()
-	{
-		if(editorDebugMode)
-		{
-			Debug.DrawRay(Root.transform.position, - Root.transform.up * balanceHeight, Color.green);
-            
-            if(useStepPrediction)
+
+
+    /// <summary>
+    /// Editor Debug Mode
+    /// </summary>
+#if UNITY_EDITOR
+    void OnDrawGizmos()
+    {
+        if (editorDebugMode)
+        {
+            Debug.DrawRay(Root.transform.position, -Root.transform.up * balanceHeight, Color.green);
+
+            if (useStepPrediction)
             {
                 Gizmos.color = Color.yellow;
                 Gizmos.DrawWireSphere(COMP.position, 0.3f);
             }
-		}
-	}
-    
+        }
+    }
+#endif
 }
