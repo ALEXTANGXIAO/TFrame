@@ -25,7 +25,7 @@ namespace ECS
         /// Remove The ECSEntity or Component And Throw the ECSObject to ArrayPool When AddComponent Or Create Can Use Again
         /// </summary>
         /// <param name="ecsObject"></param>
-        /// <param name="reuse">此对象是否可以复用，复用会将对象丢入System对象池中 等待再次使用，如果是Entity对象，并且不服用的话，则把Entity所使用的组件也不复用</param>
+        /// <param name="reuse">此对象是否可以复用，复用会将对象丢入System对象池中 等待再次使用，如果是Entity对象，并且不复用的话，则把Entity所使用的组件也不复用</param>
         public static void Destroy(ECSObject ecsObject, bool reuse = true)
         {
             if (ecsObject is ECSComponent ecsComponent)
