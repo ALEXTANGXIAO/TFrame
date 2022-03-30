@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ActorMgr:Singleton<ActorMgr>
 {
+    public GameActor MainActor
+    {
+        get { return m_mainPlayer; }
+    }
     private GameActor m_mainPlayer = null;
     private Dictionary<uint, GameActor> m_actorPool = new Dictionary<uint, GameActor>();
     private Dictionary<int, GameActor> m_goModelHash2Actor = new Dictionary<int, GameActor>();
@@ -185,13 +189,27 @@ public class ActorMgr:Singleton<ActorMgr>
 
 public static class ActorHelper
 {
-    public static SkillCaster GetSkillCaster(GameActor actor)
-    {
-        if (actor != null)
-        {
-            return actor.GetSkillCaster();
-        }
+    //public static SkillCaster GetSkillCaster(GameActor actor)
+    //{
+    //    if (actor != null)
+    //    {
+    //        return actor.GetSkillCaster();
+    //    }
 
-        return null;
+    //    return null;
+    //}
+
+    /// <summary>
+    /// 判断是否为主角
+    /// </summary>
+    /// <param name="actor"></param>
+    /// <returns></returns>
+    public static bool IsMainPlayer(GameActor actor)
+    {
+        if (actor != null && ActorMgr.Instance != null)
+        {
+            return ActorMgr.Instance.MainActor == actor;
+        }
+        return false;
     }
 }

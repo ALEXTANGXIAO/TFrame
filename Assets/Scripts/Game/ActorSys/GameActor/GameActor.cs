@@ -6,7 +6,7 @@ public abstract partial class GameActor
 
     public bool IsDestroyed { get; private set; }
 
-    protected SkillCaster m_skillCaster;
+    //protected SkillCaster m_skillCaster;
 
     private ActorEventDispatcher m_event = new ActorEventDispatcher();
 
@@ -38,11 +38,11 @@ public abstract partial class GameActor
 
     public void Destroy(bool forceNoPool = false)
     {
-        var skillCaster = GetSkillCaster();
-        if (skillCaster != null)
-        {
-            skillCaster.ClearSkill();
-        }
+        //var skillCaster = GetSkillCaster();
+        //if (skillCaster != null)
+        //{
+        //    skillCaster.ClearSkill();
+        //}
         m_isDestroyAlling = true;
 
         //调用所有的destroy
@@ -71,8 +71,8 @@ public abstract partial class GameActor
         m_isDestroyAlling = false;
     }
 
-    public SkillCaster GetSkillCaster()
-    {
-        return m_skillCaster;
-    }
+    //public SkillCaster GetSkillCaster()
+    //{
+    //    return m_skillCaster;
+    //}
 }
